@@ -54,7 +54,7 @@ El convertidor funciona bajo las siguientes condiciones:
    
 **Esquemático completo**
 
-![Esquematico](./Evidencias/Esquematico completo con parametros de simulacion.png)
+![Esquemático](./Evidencias/Esquematico completo con parametros de simulacion.png)
 
 
 
