@@ -92,16 +92,6 @@ Comparación entre valores teóricos y resultados de simulación:
 
 ---
 
-## 🎯 Especificaciones de Diseño
-- Tensión de entrada: **18 V**
-- Tensión de salida: **-33.43 V**
-- Corriente de salida: **0.557 A**
-- Resistencia de carga: **60 Ω**
-- Frecuencia de conmutación: **60 kHz**
-- Ciclo de trabajo: **D = 0.65**
-
----
-
 ## 🛠️ Selección y Justificación de Componentes
 
 ### 🔹 Transistor MOSFET
