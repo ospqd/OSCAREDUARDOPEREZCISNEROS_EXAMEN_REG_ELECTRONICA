@@ -1,153 +1,137 @@
-# 📚 Examen de Regularización - Simulación Electrónica y Tecnología y Taller
-
-**Alumno:** Oscar
+# 📚 Examen de Regularización - Simulación Electrónica
+# 📁 OSCAR_PEREZ_EXAMEN_REG_ELECTRONICA
+**Examen de Regularización**
+**Materia:** Simulación Electrónica 
 **Institución:** Bachillerato Tecnológico Salesiano Carlos Gómez
+**Alumno:** Oscar Eduardo Pérez Cisneros
+**Fecha de elaboración:** 24 de junio de 2026
 **Fecha de entrega:** Viernes 26 de junio de 2026
 **Repositorio compartido con:** @erickmone
 
 ---
 
 ## 🎯 Objetivo del Proyecto
-Analizar, calcular, simular y diseñar un convertidor de corriente continua tipo **Cúk**, cumpliendo con todos los requisitos de análisis teórico, validación por simulación, selección de componentes, diseño de placa de circuito impreso y documentación completa.
+Realizar el análisis teórico, simulación, validación de resultados, selección de componentes, diseño de placa de circuito impreso y documentación completa de un convertidor CC-CC tipo Cúk, cumpliendo estrictamente cada requisito solicitado en la guía del examen.
 
 ---
 
-## ⚙️ Parámetros de Operación
-El convertidor funciona bajo las siguientes condiciones asignadas:
+## ⚙️ Parámetros Asignados
+El convertidor funciona bajo las siguientes condiciones:
 - Tensión de entrada: 18 V
-- Inductancia de entrada: 330 µH
-- Inductancia de salida: 330 µH
-- Condensador de transferencia: 100 µF
-- Condensador de salida: 100 µF
+- Inductancias: 330 µH
+- Condensadores: 100 µF
 - Resistencia de carga: 60 Ω
 - Frecuencia de conmutación: 60 kHz
 - Ciclo de trabajo: 0.65
 
 ---
 
-## 📐 Desarrollo Analítico
-En la carpeta `Calculos/` se encuentra el documento PDF con todos los procedimientos matemáticos, deducciones y resultados obtenidos. Los valores principales calculados son:
+## 1. Desarrollo Analítico
+✅ Obtener la relación de conversión, calcular tensiones, corrientes, rizados, valores máximos y mínimos, y determinar el modo de operación.
 
-- Relación de conversión: -1.857
-- Tensión de salida: -33.43 V (polaridad inversa respecto a la entrada)
-- Corriente media de salida: 0.557 A
-- Potencia media de salida: 18.62 W
-- Corriente media de entrada: 1.034 A
-- Periodo de conmutación: 16.67 µs
-- Rizado de corriente en ambas inductancias: 0.591 A
-- Corrientes máximas y mínimas en cada inductancia
-- Rizado de tensión en condensadores
-- Modo de operación: **Conducción Continua**, ya que la corriente en las inductancias nunca llega a cero durante el ciclo completo.
+✅ **Pasos realizados:**
+1. Se obtuvo la relación de conversión del convertidor, comprobando que entrega una tensión de salida con polaridad inversa respecto a la tensión de entrada.
+2. Se calculó el valor promedio de la tensión de salida y se indicó claramente su polaridad negativa.
+3. Se determinó la corriente promedio que circula por la carga y la potencia que entrega el circuito.
+4. Se calculó la corriente promedio que consume el convertidor desde la fuente de alimentación.
+5. Se halló el periodo de conmutación correspondiente a la frecuencia de trabajo definida.
+6. Se calculó la variación de corriente (rizado) en cada una de las dos inductancias.
+7. Se obtuvieron los valores máximos y mínimos de corriente que circulan en cada inductancia durante un ciclo completo.
+8. Se verificó que en todo momento la corriente se mantiene positiva → **funcionamiento en Modo de Conducción Continua (MCC)**.
+9. Se calculó la variación de tensión (rizado) en el condensador de transferencia y en el condensador de salida.
+10. Se determinó el porcentaje de rizado total en la tensión de salida.
 
----
-
-## 🧪 Simulación en Multisim
-Dentro de la carpeta `Simulacion_Multisim/` se guarda el archivo del circuito y todas las capturas de pantalla. La configuración utilizada fue:
-
-- Fuente de alimentación de 18 V
-- Señal de control PWM con ciclo de trabajo de 0.65 y frecuencia de 60 kHz
-- Componentes con los valores nominales indicados
-- Instrumentos de medición: osciloscopio, multímetros y cursores para medir variaciones de tensión y corriente
-
-Se obtuvieron y verificaron las siguientes señales:
-- Tensión de salida
-- Corrientes en ambas inductancias
-- Tensiones en los condensadores
-- Corrientes que circulan por el interruptor MOSFET y el diodo
-- Valores de rizado de tensión y corriente
+📄 **Documentación:** Todo el procedimiento detallado y resultados se encuentran en la carpeta `Calculos/` en formato PDF.
 
 ---
 
-# 📋 Resultados del Convertidor Tipo Cúk
+## 2. Simulación en Multisim
+✅ Construir el circuito, configurar parámetros, medir todas las magnitudes y guardar capturas de señales e instrumentos.
 
-Comparación entre valores teóricos y resultados de simulación:
-
-| Parámetro                          | Símbolo       | Valor Teórico | Valor Simulado | Unidad | Error (%) |
-|------------------------------------|---------------|---------------|----------------|--------|-----------|
-| Tensión de entrada                 | Vin           | 18.00         | 18.00          | V      | 0.00 %    |
-| Tensión de salida                  | Vo            | -33.43        | -32.70         | V      | 2.18 %    |
-| Resistencia de carga               | RL            | 60            | 60             | Ω      | 0.00 %    |
-| Frecuencia de conmutación          | f             | 60            | 60             | kHz    | 0.00 %    |
-| Ciclo de trabajo                   | D             | 0.65          | 0.65           | —      | 0.00 %    |
-| Inductancia bobina 1               | L1            | 330           | 330            | µH     | 0.00 %    |
-| Inductancia bobina 2               | L2            | 330           | 330            | µH     | 0.00 %    |
-| Capacitor de transferencia         | C1            | 100           | 100            | µF     | 0.00 %    |
-| Capacitor de salida                | C2            | 100           | 100            | µF     | 0.00 %    |
-| Corriente media en L1              | IL1           | 1.035         | 1.030          | A      | 0.48 %    |
-| Corriente media en L2 / salida     | IL2 = Io      | 0.557         | 0.545          | A      | 2.15 %    |
-| Rizado de corriente en L1          | ΔiL1          | 0.591         | 0.590          | A      | 0.17 %    |
-| Rizado de corriente en L2          | ΔiL2          | 0.591         | 0.590          | A      | 0.17 %    |
-| Corriente máxima en L1             | IL1(máx)      | 1.330         | 1.325          | A      | 0.38 %    |
-| Corriente mínima en L1             | IL1(mín)      | 0.740         | 0.734          | A      | 0.81 %    |
-| Corriente máxima en L2             | IL2(máx)      | 0.853         | 0.840          | A      | 1.52 %    |
-| Corriente mínima en L2             | IL2(mín)      | 0.262         | 0.250          | A      | 4.58 %    |
-| Rizado de tensión en C1            | ΔVC1          | 60.3          | 59.5           | mV     | 1.33 %    |
-| Rizado de tensión en C2 / salida   | ΔVo           | 12.3          | 12.0           | mV     | 2.44 %    |
-| Porcentaje de rizado de salida     | % Rizado      | 0.037         | 0.037          | %      | 0.00 %    |
-| Modo de operación                  | —             | MCC           | MCC            | —      | —         |
+✅ **Pasos realizados:**
+1. Se dibujó el esquema completo del convertidor: fuente de 18 V, interruptor MOSFET, diodo, dos inductancias, dos condensadores y resistencia de carga.
+2. Se configuró la señal de control: ciclo de trabajo de 0.65 y frecuencia de conmutación de 60 kHz.
+3. Se conectaron los instrumentos de medición: osciloscopio, multímetros y cursores para medir variaciones de tensión y corriente.
+4. Se ejecutó la simulación hasta alcanzar el estado de funcionamiento estable.
+5. Se midieron y registraron todos los valores: tensión de salida, corrientes en inductancias, tensiones en condensadores, corrientes por el MOSFET y el diodo, así como los valores de rizado.
+6. Se capturaron todas las pantallas: esquema del circuito, señales de control, formas de onda de tensión y corriente, y mediciones realizadas con los instrumentos.
 
 ---
 
-✅ Conclusión: Los errores obtenidos son menores al 5 %, lo que confirma una buena coincidencia entre el modelo teórico y la simulación. El convertidor opera en **Modo de Conducción Continua (MCC)**.
+## 3. Comparación: Teoría vs Simulación
+✅ Elaborar tabla comparativa, calcular el porcentaje de error y justificar las diferencias entre valores teóricos y simulados.
+
+✅ **Tabla de resultados:**
+
+| Magnitud medida               | Valor Teórico | Valor Simulado | Error (%) |
+|--------------------------------|---------------|----------------|-----------|
+| Ciclo de trabajo D        | 0.65          | 0.65           | 0.00 %    |
+| Tensión de salida Vo     | -33.43 V      | -33.26 V       | 0.51 %    |
+| Corriente de salida Io    | 0.557 A       | 0.554 A        | 0.54 %    |
+| Corriente de entrada Iin  | 1.034 A      | 1.027 A        | 0.68 %    |
+| Rizado de corriente en L1      | 0.591 A       | 0.590 A        | 0.17 %    |
+| Rizado de corriente en L2      | 0.591 A       | 0.590 A        | 0.17 %    |
+| Corriente máxima en L1         | 1.329 A       | 1.323 A        | 0.45 %    |
+| Corriente mínima en L1         | 0.739 A       | 0.733 A        | 0.81 %    |
+| Corriente máxima en L2         | 0.852 A       | 0.847 A        | 0.59 %    |
+| Corriente mínima en L2         | 0.262 A       | 0.257 A        | 1.91 %    |
+| Rizado de tensión en C1        | 0.060 V       | 0.058 V        | 3.33 %    |
+| Rizado de tensión en C2        | 0.032 V       | 0.031 V        | 3.13 %    |
+| Porcentaje de rizado de salida | 0.096 %       | 0.093 %        | 3.13 %    |
+
+✅ **Análisis de resultados:**
+Todos los errores son menores al 5%, por lo que se consideran aceptables. Las pequeñas diferencias se explican porque el modelo teórico no considera pérdidas ni efectos parásitos, mientras que en la simulación se incluyen estos factores. Se confirma que los cálculos y el diseño son correctos.
 
 ---
 
-## 🛠️ Selección y Justificación de Componentes
+## 4. Consulta de Hojas de Datos
+✅ Revisé las especificaciones técnicas de cada componente, comparé lo que usé en la simulación con los modelos reales seleccionados y justifiqué cada elección.
 
-### 🔹 Transistor MOSFET
-**Componente solicitado:** RFD3055LE
-- Características: Canal N, Vds = 60 V, Id = 11 A, Rds(on) = 107 mΩ, nivel lógico (enciende con ≥4.5 V), Pd = 40 W.
-- **Limitación:** No existe un modelo nativo en las librerías estándar de Multisim.
+✅ **Componentes seleccionados y justificación:**
+- **MOSFET RFD3055LE**
+  Soporta hasta 60 V y 12 A de corriente continua, valores superiores a los máximos que se presentan en el circuito. Cuenta con baja resistencia de encendido, lo que reduce pérdidas, y funciona de forma eficiente a la frecuencia de trabajo de 60 kHz.
 
-**Componente base usado en simulación:** IRL540
-- Se utilizó como punto de partida por estar disponible y también ser de nivel lógico.
-- **Modificación de parámetros:** Para reproducir el comportamiento exacto del RFD3055LE, se ajustaron sus valores en la pestaña *Electronic parameters*:
+- **Driver NCP81253**
+  Diseñado para operar con alimentación de 5 V, entrega la corriente necesaria para activar y desactivar el MOSFET rápidamente, garantizando una conmutación estable y evitando sobrecalentamiento.
 
-| Parámetro | Valor original IRL540 | Nuevo valor RFD3055LE |
-|-----------|------------------------|-------------------------|
-| Vdss      | 100 V                  | **60 V**                |
-| Id        | 28 A                   | **11 A**                |
-| Rds       | 0.077 Ω                | **0.107 Ω**             |
-| Pd        | 150 W                  | **40 W**                |
-| gFS       | 12 S                   | **6.5 S**               |
+- **Diodo MUR460**
+  Es un diodo de recuperación rápida que soporta 600 V de tensión inversa y 4 A de corriente máxima. Supera las condiciones de operación del circuito, reduce pérdidas al conmutar y se adapta perfectamente a la frecuencia de trabajo.
 
-✅ **Razón:** Con estos cambios, el modelo refleja los límites eléctricos y características reales del componente solicitado.
+- **Inductancia 7447471331**
+  Tiene un valor exacto de 330 µH, soporta una corriente continua de 2.1 A y no se satura en ningún momento. Mantiene sus características eléctricas en todo el rango de funcionamiento.
+
+- **Condensador ABA0000C1018**
+  Cuenta con un valor de 100 µF, tensión nominal de 50 V y baja resistencia interna. Soporta la tensión máxima del circuito y ayuda a reducir el rizado de tensión en la salida.
 
 ---
 
-### 🔹 Driver de Compuerta
-**Componente:** Circuito de excitación mediante generador de funciones PWM
-- **Señal de control:** Amplitud de 5 V, frecuencia de 60 kHz, ciclo de trabajo 65 %.
-- **Justificación:** El RFD3055LE y el modelo ajustado operan con **nivel lógico**, por lo que 5 V son suficientes para encenderlo completamente sin necesidad de amplificación adicional.
-- Si se usara un MOSFET de nivel estándar (como el IRF540N), se requeriría un driver externo para elevar la tensión de compuerta a 10–12 V. En este diseño no es necesario, lo que simplifica el circuito.
+### 📋 Tabla comparativa: Lo que usé en la simulación vs Componente real final
+| Elemento                  | Modelo que utilicé en Multisim | Modificación o ajuste que realicé                          | Componente real definitivo | Archivo de hoja de datos correspondiente      |
+|---------------------------|----------------------------------|------------------------------------------------------------|----------------------------|-----------------------------------------------|
+| MOSFET de potencia        | **IRL540** (disponible en la biblioteca del programa) | Modifiqué sus parámetros internos para que coincidieran en tensión, corriente y resistencia con el modelo solicitado | **RFD3055LE**              | `RFD3055LE-Datasheets.pdf`                    |
+| Diodo de conmutación      | **MUR460G**                      | Lo usé directamente, ya que tiene las mismas características eléctricas que el modelo real | **MUR460**                 | `MUR460-Datasheet.pdf`                        |
+| Driver de compuerta       | Señal PWM generada con el generador de funciones XFG1 | En la simulación no es necesario colocar el circuito físico; para el diseño final lo agregué para asegurar el control correcto del MOSFET | **NCP81253**               | `NCP81253-Datasheets.pdf`                     |
+| Inductancias L1 y L2      | **330 µH** (modelo estándar)     | Configuré el valor exacto y una resistencia interna muy baja para simular un comportamiento real | **7447471331**             | `Inductor7447471331-Datasheet.pdf`            |
+| Condensadores C1 y C2     | **100 µF** (modelo electrolítico) | Ajusté su valor y tensión de trabajo a 50 V para coincidir con el componente real | **ABA0000C1018**           | `CapacitorABA0000C1018-Datasheet.pdf`         |
 
 ---
 
-### 🔹 Diodo
-**Componente:** MUR460G
-- Características: Diodo de recuperación ultrarrápida, 4 A, 600 V.
-- ✅ **Razón:** Soporta la tensión y corriente del circuito con amplio margen; su tiempo de conmutación reducido minimiza pérdidas a 60 kHz.
+#### 🔧 Procedimiento que seguí para ajustar el MOSFET
+Como el modelo **RFD3055LE** no viene incluido de forma nativa en Multisim, yo realicé lo siguiente:
+1. Seleccioné el componente **IRL540** de la lista de semiconductores, por tener características muy parecidas.
+2. Entré en sus propiedades eléctricas para modificar los valores: tensión máxima de trabajo, corriente soportada y resistencia de encendido.
+3. Ajusté todos estos parámetros para que coincidieran exactamente con lo que indica la hoja de datos del RFD3055LE.
+4. Verifiqué que con estos cambios el circuito funcionara igual que si usara el modelo solicitado.
+
+#### ⚙️ Ajustes en el resto de componentes
+- **Diodo:** El modelo **MUR460G** que usé en la simulación es idéntico al **MUR460** elegido para la placa; solo cambia la terminación de la referencia, pero sus especificaciones son exactamente las mismas.
+- **Driver:** En la simulación solo necesité generar la señal de control, pero para el diseño físico incluí el NCP81253 para garantizar que la señal de 5 V tenga la potencia suficiente para mover la compuerta del MOSFET.
+- **Inductancias:** Usé el valor de 330 µH en la simulación, y para el diseño final elegí el modelo 7447471331, que mantiene ese valor y soporta mayor corriente sin saturarse.
+- **Condensadores:** Configuré en el programa 100 µF y 50 V de tensión, igual que el componente real ABA0000C1018, que además tiene baja resistencia interna para reducir el rizado.
 
 ---
 
-### 🔹 Inductancias
-**Valor calculado:** 330 µH
-**Usado en simulación:** L1 = 330 µH, L2 = 330 µH
-- ✅ **Razón:** Es mayor que la inductancia crítica calculada (214.4 µH), garantizando operación en **Modo de Conducción Continua** y manteniendo el rizado de corriente en Δi = 0.59 A.
 
 ---
 
-### 🔹 Capacitores
-- **C1 = 100 µF:** Capacitor de transferencia de energía. Limita el rizado de tensión a ~60.3 mV.
-- **C2 = 100 µF:** Capacitor de salida. Obtiene un rizado de tensión de solo 12.3 mV (0.037 % del valor nominal).
-- ✅ **Razón:** Cumplen con los requisitos de filtrado y estabilidad calculados.
-
----
-
-### 🔹 Resistencia de Carga
-**Valor:** R1 = 60 Ω
-- ✅ **Razón:** Permite obtener la corriente de salida deseada según Ley de Ohm: Io = |Vo| / R = 33.43 V / 60 Ω = 0.557 A.
-
-
-
-
+## 📂 Estructura Completa del Repositorio
