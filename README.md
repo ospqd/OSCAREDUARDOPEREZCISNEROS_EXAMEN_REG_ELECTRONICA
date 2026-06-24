@@ -56,8 +56,11 @@ El convertidor funciona bajo las siguientes condiciones:
 
 ![Esquemático](https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/3323016b57d76b4d9a818d1ffba01ece98cb3708/Evidencias/Esquematico%20completo%20con%20parametros%20de%20simulacion.png?raw=true)
 
+**Señal PWM**
+![Señal](https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/9d0223fc54baa5a7250ba1fceb2747e4f9994e38/Evidencias/Se%C3%B1al%20PWM%20aplicada%20al%20MOSFET.png?raw=true)
 
-
+**Tension de Salida**
+![Vo](https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/9d0223fc54baa5a7250ba1fceb2747e4f9994e38/Evidencias/Tension%20de%20Salida.png?raw=true)
 
 ---
 
