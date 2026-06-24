@@ -58,21 +58,37 @@ Se obtuvieron y verificaron las siguientes señales:
 
 ---
 
-## 📊 Comparación: Teoría vs Simulación
-Se elaboró una tabla comparativa para verificar la coincidencia entre los resultados teóricos y los valores medidos en la simulación, calculando el porcentaje de error para cada magnitud:
+# 📋 Resultados del Convertidor Tipo Cúk
 
-| Variable               | Valor Teórico | Valor Simulado | Error (%) |
-|------------------------|---------------|----------------|-----------|
-| Tensión de salida      | -33.43 V      | -33.26 V       | 0.51 %    |
-| Corriente de salida    | 0.557 A       | 0.554 A        | 0.54 %    |
-| Corriente de entrada   | 1.034 A       | 1.027 A        | 0.68 %    |
-| Rizado en L1           | 0.591 A       | 0.590 A        | 0.17 %    |
-| Rizado en L2           | 0.591 A       | 0.590 A        | 0.17 %    |
-| Rizado en C1           | 0.060 V       | 0.058 V        | 3.33 %    |
-| Rizado en C2           | 0.032 V       | 0.031 V        | 3.13 %    |
-| Porcentaje de rizado   | 0.096 %       | 0.093 %        | 3.13 %    |
+Comparación entre valores teóricos y resultados de simulación:
 
-Todos los errores son menores al 5%, valor aceptable. Las pequeñas diferencias se explican por pérdidas en los componentes, parásitos del circuito y redondeo de valores.
+| Parámetro                          | Símbolo       | Valor Teórico | Valor Simulado | Unidad | Error (%) |
+|------------------------------------|---------------|---------------|----------------|--------|-----------|
+| Tensión de entrada                 | Vin           | 18.00         | 18.00          | V      | 0.00 %    |
+| Tensión de salida                  | Vo            | -33.43        | -32.70         | V      | 2.18 %    |
+| Resistencia de carga               | RL            | 60            | 60             | Ω      | 0.00 %    |
+| Frecuencia de conmutación          | f             | 60            | 60             | kHz    | 0.00 %    |
+| Ciclo de trabajo                   | D             | 0.65          | 0.65           | —      | 0.00 %    |
+| Inductancia bobina 1               | L1            | 330           | 330            | µH     | 0.00 %    |
+| Inductancia bobina 2               | L2            | 330           | 330            | µH     | 0.00 %    |
+| Capacitor de transferencia         | C1            | 100           | 100            | µF     | 0.00 %    |
+| Capacitor de salida                | C2            | 100           | 100            | µF     | 0.00 %    |
+| Corriente media en L1              | IL1           | 1.035         | 1.030          | A      | 0.48 %    |
+| Corriente media en L2 / salida     | IL2 = Io      | 0.557         | 0.545          | A      | 2.15 %    |
+| Rizado de corriente en L1          | ΔiL1          | 0.591         | 0.590          | A      | 0.17 %    |
+| Rizado de corriente en L2          | ΔiL2          | 0.591         | 0.590          | A      | 0.17 %    |
+| Corriente máxima en L1             | IL1(máx)      | 1.330         | 1.325          | A      | 0.38 %    |
+| Corriente mínima en L1             | IL1(mín)      | 0.740         | 0.734          | A      | 0.81 %    |
+| Corriente máxima en L2             | IL2(máx)      | 0.853         | 0.840          | A      | 1.52 %    |
+| Corriente mínima en L2             | IL2(mín)      | 0.262         | 0.250          | A      | 4.58 %    |
+| Rizado de tensión en C1            | ΔVC1          | 60.3          | 59.5           | mV     | 1.33 %    |
+| Rizado de tensión en C2 / salida   | ΔVo           | 12.3          | 12.0           | mV     | 2.44 %    |
+| Porcentaje de rizado de salida     | % Rizado      | 0.037         | 0.037          | %      | 0.00 %    |
+| Modo de operación                  | —             | MCC           | MCC            | —      | —         |
+
+---
+
+✅ Conclusión: Los errores obtenidos son menores al 5 %, lo que confirma una buena coincidencia entre el modelo teórico y la simulación. El convertidor opera en **Modo de Conducción Continua (MCC)**.
 
 ---
 
