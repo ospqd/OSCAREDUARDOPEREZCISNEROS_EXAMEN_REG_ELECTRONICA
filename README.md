@@ -11,7 +11,7 @@
 ---
 
 ## 🎯 Objetivo del Proyecto
-Realizar el análisis teórico, simulación, validación de resultados, selección de componentes, diseño de placa de circuito impreso y documentación completa de un convertidor CC-CC tipo Cúk, cumpliendo estrictamente cada requisito solicitado en la guía del examen.
+Realizar el análisis teórico, simulación, validación de resultados, selección de componentes y documentación completa de un convertidor CC-CC tipo Cúk,
 
 ---
 
@@ -63,24 +63,24 @@ El convertidor funciona bajo las siguientes condiciones:
 
 ✅ **Tabla de resultados:**
 
-| Magnitud medida               | Valor Teórico | Valor Simulado | Error (%) |
-|--------------------------------|---------------|----------------|-----------|
-| Ciclo de trabajo D        | 0.65          | 0.65           | 0.00 %    |
-| Tensión de salida Vo     | -33.43 V      | -33.26 V       | 0.51 %    |
-| Corriente de salida Io    | 0.557 A       | 0.554 A        | 0.54 %    |
-| Corriente de entrada Iin  | 1.034 A      | 1.027 A        | 0.68 %    |
-| Rizado de corriente en L1      | 0.591 A       | 0.590 A        | 0.17 %    |
-| Rizado de corriente en L2      | 0.591 A       | 0.590 A        | 0.17 %    |
-| Corriente máxima en L1         | 1.329 A       | 1.323 A        | 0.45 %    |
-| Corriente mínima en L1         | 0.739 A       | 0.733 A        | 0.81 %    |
-| Corriente máxima en L2         | 0.852 A       | 0.847 A        | 0.59 %    |
-| Corriente mínima en L2         | 0.262 A       | 0.257 A        | 1.91 %    |
-| Rizado de tensión en C1        | 0.060 V       | 0.058 V        | 3.33 %    |
-| Rizado de tensión en C2        | 0.032 V       | 0.031 V        | 3.13 %    |
-| Porcentaje de rizado de salida | 0.096 %       | 0.093 %        | 3.13 %    |
+| Variable               | Valor teórico | Valor simulado | Error (%) |
+|------------------------|---------------|----------------|-----------|
+| Ciclo de trabajo D     | 0.65          | 0.65           | 0.00 %    |
+| Tensión de salida Vo   | -33.43 V      | -32.6 V        | 2.48 %    |
+| Corriente de salida Io | 0.557 A       | 0.544 A        | 2.33 %    |
+| Potencia de salida Po  | 18.63 W       | 17.7 W         | 4.99 %    |
+| Corriente de entrada Iin | 1.035 A    | 1.03 A         | 0.48 %    |
+| Rizado de corriente L1 ΔiL1 | 0.591 A | 0.590 A | 0.17 % |
+| Rizado de corriente L2 ΔiL2 | 0.591 A | 0.590 A | 0.17 % |
+| Corriente máxima L1 iL1,máx | 1.330 A | 1.32 A | 0.75 % |
+| Corriente mínima L1 iL1,mín | 0.739 A | 0.731 A | 1.08 % |
+| Corriente máxima L2 iL2,máx | 0.853 A | 0.839 A | 1.64 % |
+| Corriente mínima L2 iL2,mín | 0.262 A | 0.249 A | 4.96 % |
+| Rizado de tensión C1 ΔVC1 | 0.060 V | 0.059 V | 1.67 % |
+| Rizado de tensión de salida ΔVo | 12.3 mV | 12.0 mV | 2.44 % |
+| Porcentaje de rizado de salida | 0.037 % | 0.036 % | 2.70 % |
 
-✅ **Análisis de resultados:**
-Todos los errores son menores al 5%, por lo que se consideran aceptables. Las pequeñas diferencias se explican porque el modelo teórico no considera pérdidas ni efectos parásitos, mientras que en la simulación se incluyen estos factores. Se confirma que los cálculos y el diseño son correctos.
+✅ Todos los errores son menores al 5%, por lo que se consideran aceptables. Las pequeñas diferencias se explican porque el modelo teórico no considera pérdidas ni efectos parásitos, mientras que en la simulación se incluyen estos factores. Se confirma que los cálculos y el diseño son correctos.
 
 ---
 
