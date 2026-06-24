@@ -62,6 +62,22 @@ El convertidor funciona bajo las siguientes condiciones:
 **Tension de Salida**
 ![Vo](https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/9d0223fc54baa5a7250ba1fceb2747e4f9994e38/Evidencias/Tension%20de%20Salida.png?raw=true)
 
+**Corriente en L1**
+![L1](https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/e1ecf87ae49707e5969dcb5bf94db16f37607d36/Evidencias/Corriente%20en%20L1.png?raw=true)
+![L1](https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/e1ecf87ae49707e5969dcb5bf94db16f37607d36/Evidencias/Corriente%20en%20L1%20Amperimetro.png?raw=true)
+
+**Corriente en L2**
+![L2](https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/e1ecf87ae49707e5969dcb5bf94db16f37607d36/Evidencias/Corriente%20en%20L2.png?raw=true)
+![L2](https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/e1ecf87ae49707e5969dcb5bf94db16f37607d36/Evidencias/Corriente%20en%20L2%20Amperimetro.png?raw=true)
+
+**Tension en C1**
+![C1](https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/e1ecf87ae49707e5969dcb5bf94db16f37607d36/Evidencias/Tension%20delC1%20tecktronix.png?raw=true)
+
+**Tension en C2**
+![C2
+
+
+
 ---
 
 ## 3. Comparación: Teoría vs Simulación
@@ -114,7 +130,7 @@ El convertidor funciona bajo las siguientes condiciones:
 ### 📋 Tabla comparativa: Lo que usé en la simulación vs Componente real final
 | Elemento                  | Modelo que utilicé en Multisim | Modificación o ajuste que realicé                          | Componente real definitivo | Archivo de hoja de datos correspondiente      |
 |---------------------------|----------------------------------|------------------------------------------------------------|----------------------------|-----------------------------------------------|
-| MOSFET de potencia        | **IRL540** (disponible en la biblioteca del programa) | Modifiqué sus parámetros internos para que coincidieran en tensión, corriente y resistencia con el modelo solicitado | **RFD3055LE**              | `RFD3055LE-Datasheets.pdf`                    |
+| MOSFET de potencia        | **IRF540** (disponible en la biblioteca del programa) | Modifiqué sus parámetros internos para que coincidieran en tensión, corriente y resistencia con el modelo solicitado | **RFD3055LE**              | `RFD3055LE-Datasheets.pdf`                    |
 | Diodo de conmutación      | **MUR460G**                      | Lo usé directamente, ya que tiene las mismas características eléctricas que el modelo real | **MUR460**                 | `MUR460-Datasheet.pdf`                        |
 | Driver de compuerta       | Señal PWM generada con el generador de funciones XFG1 | En la simulación no es necesario colocar el circuito físico; para el diseño final lo agregué para asegurar el control correcto del MOSFET | **NCP81253**               | `NCP81253-Datasheets.pdf`                     |
 | Inductancias L1 y L2      | **330 µH** (modelo estándar)     | Configuré el valor exacto y una resistencia interna muy baja para simular un comportamiento real | **7447471331**             | `Inductor7447471331-Datasheet.pdf`            |
@@ -124,7 +140,7 @@ El convertidor funciona bajo las siguientes condiciones:
 
 #### 🔧 Procedimiento que seguí para ajustar el MOSFET
 Como el modelo **RFD3055LE** no viene incluido de forma nativa en Multisim, yo realicé lo siguiente:
-1. Seleccioné el componente **IRL540** de la lista de semiconductores, por tener características muy parecidas.
+1. Seleccioné el componente **IRF540** de la lista de semiconductores, por tener características muy parecidas.
 2. Entré en sus propiedades eléctricas para modificar los valores: tensión máxima de trabajo, corriente soportada y resistencia de encendido.
 3. Ajusté todos estos parámetros para que coincidieran exactamente con lo que indica la hoja de datos del RFD3055LE.
 4. Verifiqué que con estos cambios el circuito funcionara igual que si usara el modelo solicitado.
