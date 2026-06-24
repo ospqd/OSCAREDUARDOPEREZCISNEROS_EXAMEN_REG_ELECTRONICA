@@ -1,4 +1,5 @@
 # 📚 Examen de Regularización - Simulación Electrónica y Tecnología y Taller
+
 **Alumno:** Oscar
 **Institución:** Bachillerato Tecnológico Salesiano Carlos Gómez
 **Fecha de entrega:** Viernes 26 de junio de 2026
@@ -7,137 +8,82 @@
 ---
 
 ## 🎯 Objetivo del Proyecto
-Analizar, calcular, simular y diseñar un convertidor CC-CC tipo Cúk bajo condiciones de funcionamiento definidas, cumpliendo con los requisitos de análisis teórico, validación por simulación, selección de componentes, diseño de placa de circuito impreso (PCB) y documentación completa.
+Analizar, calcular, simular y diseñar un convertidor de corriente continua tipo **Cúk**, cumpliendo con todos los requisitos de análisis teórico, validación por simulación, selección de componentes, diseño de placa de circuito impreso y documentación completa.
 
 ---
 
 ## ⚙️ Parámetros de Operación
-El convertidor trabaja con los siguientes valores:
-- Tensión de entrada: \( V_G = 18\ \text{V} \)
-- Inductancias: \( L_1 = 330\ \mu\text{H} \), \( L_2 = 330\ \mu\text{H} \)
-- Condensadores: \( C_1 = 100\ \mu\text{F} \), \( C_2 = 100\ \mu\text{F} \)
-- Resistencia de carga: \( R = 60\ \Omega \)
-- Frecuencia de conmutación: \( f_s = 60\ \text{kHz} \)
-- Ciclo de trabajo: \( D = 0.65 \)
+El convertidor funciona bajo las siguientes condiciones asignadas:
+- Tensión de entrada: 18 V
+- Inductancia de entrada: 330 µH
+- Inductancia de salida: 330 µH
+- Condensador de transferencia: 100 µF
+- Condensador de salida: 100 µF
+- Resistencia de carga: 60 Ω
+- Frecuencia de conmutación: 60 kHz
+- Ciclo de trabajo: 0.65
 
 ---
 
 ## 📐 Desarrollo Analítico
-Todos los cálculos algebraicos y resultados se detallan en la carpeta `Calculos/` en formato PDF. A continuación se resumen los resultados principales:
+En la carpeta `Calculos/` se encuentra el documento PDF con todos los procedimientos matemáticos, deducciones y resultados obtenidos. Los valores principales calculados son:
 
-### 1. Relación de conversión
-\[
-\frac{V_O}{V_G} = -\frac{D}{1-D} = -\frac{0.65}{1-0.65} = -1.857
-\]
-
-### 2. Tensión de salida
-\[
-V_O = V_G \cdot \left(-\frac{D}{1-D}\right) = 18 \cdot (-1.857) = -33.43\ \text{V}
-\]
-*Polaridad: Inversa respecto a la entrada*
-
-### 3. Corriente media de salida
-\[
-I_O = \frac{|V_O|}{R} = \frac{33.43}{60} = 0.557\ \text{A}
-\]
-
-### 4. Potencia media de salida
-\[
-P_O = |V_O| \cdot I_O = 33.43 \cdot 0.557 = 18.62\ \text{W}
-\]
-
-### 5. Corriente media de entrada
-\[
-I_{in} = \frac{P_O}{V_G} = \frac{18.62}{18} = 1.034\ \text{A}
-\]
-
-### 6. Periodo de conmutación
-\[
-T_s = \frac{1}{f_s} = \frac{1}{60000} = 16.67\ \mu\text{s}
-\]
-
-### 7. Rizado de corriente en inductancias
-\[
-\Delta i_{L1} = \frac{V_G \cdot D}{L_1 \cdot f_s} = \frac{18 \cdot 0.65}{330\times10^{-6} \cdot 60000} = 0.591\ \text{A}
-\]
-\[
-\Delta i_{L2} = \frac{|V_O| \cdot (1-D)}{L_2 \cdot f_s} = \frac{33.43 \cdot 0.35}{330\times10^{-6} \cdot 60000} = 0.591\ \text{A}
-\]
-
-### 8. Corrientes máximas y mínimas
-- **Inductancia \( L_1 \):**
-  \[
-  i_{L1,\text{max}} = I_{in} + \frac{\Delta i_{L1}}{2} = 1.034 + 0.295 = 1.329\ \text{A}
-  \]
-  \[
-  i_{L1,\text{min}} = I_{in} - \frac{\Delta i_{L1}}{2} = 1.034 - 0.295 = 0.739\ \text{A}
-  \]
-- **Inductancia \( L_2 \):**
-  \[
-  i_{L2,\text{max}} = I_O + \frac{\Delta i_{L2}}{2} = 0.557 + 0.295 = 0.852\ \text{A}
-  \]
-  \[
-  i_{L2,\text{min}} = I_O - \frac{\Delta i_{L2}}{2} = 0.557 - 0.295 = 0.262\ \text{A}
-  \]
-
-✅ **Modo de operación:** Ambas inductancias mantienen corriente positiva en todo el ciclo → **Conducción Continua (MCC)**
-
-### 9. Rizado de tensión en condensadores
-\[
-\Delta V_{C1} = \frac{I_O \cdot D}{C_1 \cdot f_s} = \frac{0.557 \cdot 0.65}{100\times10^{-6} \cdot 60000} = 0.060\ \text{V}
-\]
-\[
-\Delta V_{C2} = \frac{I_O \cdot (1-D)}{C_2 \cdot f_s} = \frac{0.557 \cdot 0.35}{100\times10^{-6} \cdot 60000} = 0.032\ \text{V}
-\]
-\[
-\text{Rizado relativo de salida} = \frac{\Delta V_O}{|V_O|} \times 100 = \frac{0.032}{33.43} \times 100 = 0.096\%
-\]
+- Relación de conversión: -1.857
+- Tensión de salida: -33.43 V (polaridad inversa respecto a la entrada)
+- Corriente media de salida: 0.557 A
+- Potencia media de salida: 18.62 W
+- Corriente media de entrada: 1.034 A
+- Periodo de conmutación: 16.67 µs
+- Rizado de corriente en ambas inductancias: 0.591 A
+- Corrientes máximas y mínimas en cada inductancia
+- Rizado de tensión en condensadores
+- Modo de operación: **Conducción Continua**, ya que la corriente en las inductancias nunca llega a cero durante el ciclo completo.
 
 ---
 
 ## 🧪 Simulación en Multisim
-El circuito completo se encuentra en la carpeta `Simulacion_Multisim/`. Se configuró con:
-- Fuente de 18 V
-- Generador PWM: \( D=0.65 \), \( f_s=60\ \text{kHz} \)
-- Componentes con los valores nominales indicados
-- Instrumentos: osciloscopio, multímetros y cursores de medición
+Dentro de la carpeta `Simulacion_Multisim/` se guarda el archivo del circuito y todas las capturas de pantalla. La configuración utilizada fue:
 
-### Señales validadas:
-- Tensión de salida \( v_O(t) \)
-- Corrientes en \( L_1 \) y \( L_2 \)
-- Tensiones en \( C_1 \) y \( C_2 \)
-- Corrientes por MOSFET y diodo
-- Medición directa de rizados de corriente y tensión
+- Fuente de alimentación de 18 V
+- Señal de control PWM con ciclo de trabajo de 0.65 y frecuencia de 60 kHz
+- Componentes con los valores nominales indicados
+- Instrumentos de medición: osciloscopio, multímetros y cursores para medir variaciones de tensión y corriente
+
+Se obtuvieron y verificaron las siguientes señales:
+- Tensión de salida
+- Corrientes en ambas inductancias
+- Tensiones en los condensadores
+- Corrientes que circulan por el interruptor MOSFET y el diodo
+- Valores de rizado de tensión y corriente
 
 ---
 
-## 📊 Comparación Teoría vs Simulación
-| Variable       | Valor Teórico | Valor Simulado | Error (%) |
-|----------------|---------------|----------------|-----------|
-| \( V_O \)      | -33.43 V      | -33.26 V       | 0.51%     |
-| \( I_O \)      | 0.557 A       | 0.554 A        | 0.54%     |
-| \( \Delta i_{L1} \) | 0.591 A | 0.590 A | 0.17% |
-| \( \Delta i_{L2} \) | 0.591 A | 0.590 A | 0.17% |
-| \( \Delta V_{C1} \) | 0.060 V | 0.058 V | 3.33% |
-| \( \Delta V_{C2} \) | 0.032 V | 0.031 V | 3.12% |
-| Rizado (%)     | 0.096%        | 0.093%         | 3.12%     |
+## 📊 Comparación: Teoría vs Simulación
+Se elaboró una tabla comparativa para verificar la coincidencia entre los resultados teóricos y los valores medidos en la simulación, calculando el porcentaje de error para cada magnitud:
 
-✅ Los resultados coinciden con desviaciones menores al 5%, debidas a pérdidas parásitas y redondeo numérico.
+| Variable               | Valor Teórico | Valor Simulado | Error (%) |
+|------------------------|---------------|----------------|-----------|
+| Tensión de salida      | -33.43 V      | -33.26 V       | 0.51 %    |
+| Corriente de salida    | 0.557 A       | 0.554 A        | 0.54 %    |
+| Corriente de entrada   | 1.034 A       | 1.027 A        | 0.68 %    |
+| Rizado en L1           | 0.591 A       | 0.590 A        | 0.17 %    |
+| Rizado en L2           | 0.591 A       | 0.590 A        | 0.17 %    |
+| Rizado en C1           | 0.060 V       | 0.058 V        | 3.33 %    |
+| Rizado en C2           | 0.032 V       | 0.031 V        | 3.13 %    |
+| Porcentaje de rizado   | 0.096 %       | 0.093 %        | 3.13 %    |
+
+Todos los errores son menores al 5%, valor aceptable. Las pequeñas diferencias se explican por pérdidas en los componentes, parásitos del circuito y redondeo de valores.
 
 ---
 
 ## 📄 Selección de Componentes
-Se consultaron las hojas técnicas de todos los elementos, disponibles en la carpeta `Datasheets/`:
-- **MOSFET:** RFD3055LE → 60 V, 12 A, baja resistencia de encendido, adecuado para 60 kHz
-- **Driver:** NCP81253 → 5 V de alimentación, salida suficiente para conmutar el MOSFET
-- **Diodo:** Schottky 45 V / 5 A → baja caída de tensión directa
-- **Inductancias:** 330 µH, corriente nominal ≥ 2 A → soportan la corriente máxima con margen
-- **Condensadores:** Electrolíticos 100 µF / 50 V → tensión nominal mayor a la máxima de operación
+Se consultaron y analizaron las hojas técnicas de todos los elementos utilizados, disponibles en la carpeta `Datasheets/`. La selección se justifica así:
 
-
-
-
-
+- **MOSFET RFD3055LE:** Soporta tensión y corriente suficientes, con baja resistencia de encendido, adecuado para la frecuencia de trabajo.
+- **Driver NCP81253:** Diseñado para manejar señales de control de compuerta con alimentación de 5 V, ideal para conmutar el MOSFET correctamente.
+- **Diodo:** Tipo Schottky, con tensión y corriente nominales superiores a los valores máximos de operación.
+- **Inductancias:** Valor de 330 µH, con corriente nominal superior a la máxima que circula en el circuito.
+- **Condensadores:** Valor de 100 µF y tensión nominal mayor a la máxima que se presenta en el circuito.
 
 
 
