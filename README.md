@@ -7,7 +7,7 @@ Oscar Eduardo Pérez
 
 # Objetivo del Proyecto
 
-Analizar, simular y diseñar un convertidor Ćuk, verificando experimentalmente mediante simulación en Multisim los resultados obtenidos de forma analítica.
+Se desea analizar y simular un convertidor Cuk
 
 # Problema Asignado
 
@@ -15,14 +15,17 @@ Diseñar y analizar un convertidor Ćuk con los siguientes parámetros:
 
 ## Parámetro-Valor 
 
-- Voltaje de entrada (Vg) 18 V 
-- Inductancia L1 - 330 µH 
-- Inductancia L2 - 330 µH 
-- Capacitor C1 - 100 µF 
-- Capacitor C2 - 100 µF 
-- Resistencia de carga - 60 Ω 
-- Frecuencia de conmutación - 60 kHz 
-- Ciclo de trabajo (D) - 0.65 
+| Parámetro | Valor |
+|-----------|--------|
+| Voltaje de entrada (Vin) | 18 V |
+| Voltaje de salida (Vout) | -33.43 V |
+| Frecuencia de conmutación | 60 kHz |
+| Inductancia L1 | 330 µH |
+| Inductancia L2 | 330 µH |
+| Capacitor C1 | 100 µF |
+| Capacitor C2 | 100 µF |
+| Resistencia de carga | 60 Ω |
+| Ciclo de trabajo (D) | 0.65 |
 
 # 1. Desarrollo Analítico
 
