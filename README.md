@@ -37,13 +37,9 @@ El convertidor funciona bajo las siguientes condiciones:
 5. Se halló el periodo de conmutación correspondiente a la frecuencia de trabajo definida.
 6. Se calculó la variación de corriente (rizado) en cada una de las dos inductancias.
 7. Se obtuvieron los valores máximos y mínimos de corriente que circulan en cada inductancia durante un ciclo completo.
-8. Se verificó que en todo momento la corriente se mantiene positiva → **funcionamiento en Modo de Conducción Continua (MCC)**.
+8. Se verificó que en todo momento la corriente se mantiene positiva → funcionamiento en Modo de Conducción Continua (MCC).
 9. Se calculó la variación de tensión (rizado) en el condensador de transferencia y en el condensador de salida.
 10. Se determinó el porcentaje de rizado total en la tensión de salida.
-
-📄 **Documentación:** Todo el procedimiento detallado y resultados se encuentran en la carpeta `Calculos/` en formato PDF.
-
----
 
 ## 2. Simulación en Multisim
 ✅ Construir el circuito, configurar parámetros, medir todas las magnitudes y guardar capturas de señales e instrumentos.
