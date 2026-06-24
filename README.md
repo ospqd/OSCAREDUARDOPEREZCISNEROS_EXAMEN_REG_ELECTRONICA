@@ -77,22 +77,22 @@ Error (%) = ((Valor Simulado - Valor Teórico) / Valor Teórico) × 100
 
 # Resultados del Convertidor Ćuk — Teoría vs Simulación
 
-| Variable | Símbolo | Teórico | Simulado | Error % |
+## | Variable | Símbolo | Teórico | Simulado | Error % |
 
-| Ciclo de trabajo | D | 0.65 | 0.65 | 0.00 % |
-| Voltaje de salida | Vo | -33.43 V | -32.6 V | 2.48 % |
-| Corriente de salida | Io | 0.557 A | 0.544 A | 2.33 % |
-| Potencia de salida | Po | 18.63 W | 17.7 W | 4.99 % |
-| Corriente de entrada | Iin | 1.035 A | 1.03 A | 0.48 % |
-| Rizo de corriente L1 | ΔiL1 | 0.591 A | 0.590 A | 0.17% |
-| Rizo de corriente L2 | ΔiL2 | 0.591 A | 0.590 A | 0.17 % |
-| Corriente L1 máxima | iL1,max | 1.330 A | 1.32 A | 0.75 % |
-| Corriente L1 mínima | iL1,min | 0.739 A | 0.731 A | 1.08 % |
-| Corriente L2 máxima | iL2,max | 0.853 A | 0.839 A | 1.64% |
-| Corriente L2 mínima | iL2,min | 0.262 A | 0.249 A | 4.96% |
-| Rizo de voltaje C1 | ΔVC1 | 0.060 V | 0.059 V | 1.67 % |
-| Rizo de voltaje de salida | ΔVo | 12.3 mV | 12 mV | 2.44% |
-| Rizado de salida | %rizo | 0.037 % | 0.37 % | 0.00% |
+- | Ciclo de trabajo | D | 0.65 | 0.65 | 0.00 % |
+- | Voltaje de salida | Vo | -33.43 V | -32.6 V | 2.48 % |
+- | Corriente de salida | Io | 0.557 A | 0.544 A | 2.33 % |
+- | Potencia de salida | Po | 18.63 W | 17.7 W | 4.99 % |
+- | Corriente de entrada | Iin | 1.035 A | 1.03 A | 0.48 % |
+- | Rizo de corriente L1 | ΔiL1 | 0.591 A | 0.590 A | 0.17% |
+- | Rizo de corriente L2 | ΔiL2 | 0.591 A | 0.590 A | 0.17 % |
+- | Corriente L1 máxima | iL1,max | 1.330 A | 1.32 A | 0.75 % |
+- | Corriente L1 mínima | iL1,min | 0.739 A | 0.731 A | 1.08 % |
+- | Corriente L2 máxima | iL2,max | 0.853 A | 0.839 A | 1.64% |
+- | Corriente L2 mínima | iL2,min | 0.262 A | 0.249 A | 4.96% |
+- | Rizo de voltaje C1 | ΔVC1 | 0.060 V | 0.059 V | 1.67 % |
+- | Rizo de voltaje de salida | ΔVo | 12.3 mV | 12 mV | 2.44% |
+- | Rizado de salida | %rizo | 0.037 % | 0.37 % | 0.00% |
 
 
 
