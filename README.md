@@ -51,7 +51,7 @@ El convertidor funciona bajo las siguientes condiciones:
 4. Se ejecutó la simulación hasta alcanzar el estado de funcionamiento estable.
 5. Se midieron y registraron todos los valores: tensión de salida, corrientes en inductancias, tensiones en condensadores, corrientes por el MOSFET y el diodo, así como los valores de rizado.
 6. Se capturaron todas las pantallas: esquema del circuito, señales de control, formas de onda de tensión y corriente, y mediciones realizadas con los instrumentos.
-7. ![Esquematico]("C:\Users\PC\OneDrive\Desktop\Evidencias\Esquematico completo con parametros de simulacion.png")
+7. ![Esquematico]("https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/main/Evidencias/Esquematico%20completo%20con%20parametros%20de%20simulacion.png")
 
 ---
 
