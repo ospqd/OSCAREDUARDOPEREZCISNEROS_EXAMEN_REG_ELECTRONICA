@@ -92,14 +92,72 @@ Comparación entre valores teóricos y resultados de simulación:
 
 ---
 
-## 📄 Selección de Componentes
-Se consultaron y analizaron las hojas técnicas de todos los elementos utilizados, disponibles en la carpeta `Datasheets/`. La selección se justifica así:
+## 🎯 Especificaciones de Diseño
+- Tensión de entrada: **18 V**
+- Tensión de salida: **-33.43 V**
+- Corriente de salida: **0.557 A**
+- Resistencia de carga: **60 Ω**
+- Frecuencia de conmutación: **60 kHz**
+- Ciclo de trabajo: **D = 0.65**
 
-- **MOSFET RFD3055LE:** Soporta tensión y corriente suficientes, con baja resistencia de encendido, adecuado para la frecuencia de trabajo.
-- **Driver NCP81253:** Diseñado para manejar señales de control de compuerta con alimentación de 5 V, ideal para conmutar el MOSFET correctamente.
-- **Diodo:** Tipo Schottky, con tensión y corriente nominales superiores a los valores máximos de operación.
-- **Inductancias:** Valor de 330 µH, con corriente nominal superior a la máxima que circula en el circuito.
-- **Condensadores:** Valor de 100 µF y tensión nominal mayor a la máxima que se presenta en el circuito.
+---
+
+## 🛠️ Selección y Justificación de Componentes
+
+### 🔹 Transistor MOSFET
+**Componente solicitado:** RFD3055LE
+- Características: Canal N, Vds = 60 V, Id = 11 A, Rds(on) = 107 mΩ, nivel lógico (enciende con ≥4.5 V), Pd = 40 W.
+- **Limitación:** No existe un modelo nativo en las librerías estándar de Multisim.
+
+**Componente base usado en simulación:** IRL540
+- Se utilizó como punto de partida por estar disponible y también ser de nivel lógico.
+- **Modificación de parámetros:** Para reproducir el comportamiento exacto del RFD3055LE, se ajustaron sus valores en la pestaña *Electronic parameters*:
+
+| Parámetro | Valor original IRL540 | Nuevo valor RFD3055LE |
+|-----------|------------------------|-------------------------|
+| Vdss      | 100 V                  | **60 V**                |
+| Id        | 28 A                   | **11 A**                |
+| Rds       | 0.077 Ω                | **0.107 Ω**             |
+| Pd        | 150 W                  | **40 W**                |
+| gFS       | 12 S                   | **6.5 S**               |
+
+✅ **Razón:** Con estos cambios, el modelo refleja los límites eléctricos y características reales del componente solicitado.
+
+---
+
+### 🔹 Driver de Compuerta
+**Componente:** Circuito de excitación mediante generador de funciones PWM
+- **Señal de control:** Amplitud de 5 V, frecuencia de 60 kHz, ciclo de trabajo 65 %.
+- **Justificación:** El RFD3055LE y el modelo ajustado operan con **nivel lógico**, por lo que 5 V son suficientes para encenderlo completamente sin necesidad de amplificación adicional.
+- Si se usara un MOSFET de nivel estándar (como el IRF540N), se requeriría un driver externo para elevar la tensión de compuerta a 10–12 V. En este diseño no es necesario, lo que simplifica el circuito.
+
+---
+
+### 🔹 Diodo
+**Componente:** MUR460G
+- Características: Diodo de recuperación ultrarrápida, 4 A, 600 V.
+- ✅ **Razón:** Soporta la tensión y corriente del circuito con amplio margen; su tiempo de conmutación reducido minimiza pérdidas a 60 kHz.
+
+---
+
+### 🔹 Inductancias
+**Valor calculado:** 330 µH
+**Usado en simulación:** L1 = 330 µH, L2 = 330 µH
+- ✅ **Razón:** Es mayor que la inductancia crítica calculada (214.4 µH), garantizando operación en **Modo de Conducción Continua** y manteniendo el rizado de corriente en Δi = 0.59 A.
+
+---
+
+### 🔹 Capacitores
+- **C1 = 100 µF:** Capacitor de transferencia de energía. Limita el rizado de tensión a ~60.3 mV.
+- **C2 = 100 µF:** Capacitor de salida. Obtiene un rizado de tensión de solo 12.3 mV (0.037 % del valor nominal).
+- ✅ **Razón:** Cumplen con los requisitos de filtrado y estabilidad calculados.
+
+---
+
+### 🔹 Resistencia de Carga
+**Valor:** R1 = 60 Ω
+- ✅ **Razón:** Permite obtener la corriente de salida deseada según Ley de Ohm: Io = |Vo| / R = 33.43 V / 60 Ω = 0.557 A.
+
 
 
 
