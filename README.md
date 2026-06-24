@@ -52,9 +52,9 @@ El convertidor funciona bajo las siguientes condiciones:
 5. Se midieron y registraron todos los valores: tensión de salida, corrientes en inductancias, tensiones en condensadores, corrientes por el MOSFET y el diodo, así como los valores de rizado.
 6. Se capturaron todas las pantallas: esquema del circuito, señales de control, formas de onda de tensión y corriente, y mediciones realizadas con los instrumentos.
 7. 
-![Esquemático completo](./Evidencias/Esquematico completo con parametros de simulacion.png)
+![Esquemático completo](./Evidencias/Esquematico_completo_con_parametros_de_simulacion.png)
 
-![Circuito simulado en Multisim](./Evidencias/Esquematico completo con parametros de simulacion.png)
+
 
 
 
