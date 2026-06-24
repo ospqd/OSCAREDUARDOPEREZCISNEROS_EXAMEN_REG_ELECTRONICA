@@ -13,16 +13,16 @@ Analizar, simular y diseñar un convertidor Ćuk, verificando experimentalmente 
 
 Diseñar y analizar un convertidor Ćuk con los siguientes parámetros:
 
-## Parámetro  Valor 
+## Parámetro-Valor 
 
--Voltaje de entrada (Vg) 18 V 
--Inductancia L1 - 330 µH 
--Inductancia L2 - 330 µH 
--Capacitor C1 - 100 µF 
--Capacitor C2 - 100 µF 
--Resistencia de carga - 60 Ω 
--Frecuencia de conmutación - 60 kHz 
--Ciclo de trabajo (D) - 0.65 
+- Voltaje de entrada (Vg) 18 V 
+- Inductancia L1 - 330 µH 
+- Inductancia L2 - 330 µH 
+- Capacitor C1 - 100 µF 
+- Capacitor C2 - 100 µF 
+- Resistencia de carga - 60 Ω 
+- Frecuencia de conmutación - 60 kHz 
+- Ciclo de trabajo (D) - 0.65 
 
 # 1. Desarrollo Analítico
 
