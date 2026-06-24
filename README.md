@@ -54,10 +54,10 @@ El convertidor funciona bajo las siguientes condiciones:
    
 **Esquemático completo**
 
-![Esquemático](./Evidencias/Esquematico completo con parametros de simulacion.png)
+![Esquemático]([./Evidencias/Esquematico completo con parametros de simulacion.png](https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/3323016b57d76b4d9a818d1ffba01ece98cb3708/Evidencias/Esquematico%20completo%20con%20parametros%20de%20simulacion.png))
 
 
-
+https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/3323016b57d76b4d9a818d1ffba01ece98cb3708/Evidencias/Esquematico%20completo%20con%20parametros%20de%20simulacion.png
 
 ---
 
