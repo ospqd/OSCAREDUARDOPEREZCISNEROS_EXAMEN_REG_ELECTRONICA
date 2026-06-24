@@ -53,7 +53,8 @@ El convertidor funciona bajo las siguientes condiciones:
 6. Se capturaron todas las pantallas: esquema del circuito, señales de control, formas de onda de tensión y corriente, y mediciones realizadas con los instrumentos.
    
 **Esquemático completo**
-![Esquemático completo](./Evidencias/Esquematico completo con parametros de simulacion.png)
+
+![Esquematico](./Evidencias/Esquematico completo con parametros de simulacion.png)
 
 
 
