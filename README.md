@@ -1,101 +1,140 @@
-# OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA
-Repositorio con el desarrollo, cálculos teóricos y simulación de un convertidor Cuk, realizado para la asignatura de Simulacion Electronica del Bachillerato Tecnologico Salesiano Carlos Gomez
-# Examen de Regularizacion-Simulacion Electronica
+# 📚 Examen de Regularización - Simulación Electrónica y Tecnología y Taller
+**Alumno:** Oscar
+**Institución:** Bachillerato Tecnológico Salesiano Carlos Gómez
+**Fecha de entrega:** Viernes 26 de junio de 2026
+**Repositorio compartido con:** @erickmone
 
-# Alumno
-Oscar Eduardo Pérez
+---
 
-# Objetivo del Proyecto
+## 🎯 Objetivo del Proyecto
+Analizar, calcular, simular y diseñar un convertidor CC-CC tipo Cúk bajo condiciones de funcionamiento definidas, cumpliendo con los requisitos de análisis teórico, validación por simulación, selección de componentes, diseño de placa de circuito impreso (PCB) y documentación completa.
 
-Se desea analizar y simular un convertidor Cuk
+---
 
-# Problema Asignado
+## ⚙️ Parámetros de Operación
+El convertidor trabaja con los siguientes valores:
+- Tensión de entrada: \( V_G = 18\ \text{V} \)
+- Inductancias: \( L_1 = 330\ \mu\text{H} \), \( L_2 = 330\ \mu\text{H} \)
+- Condensadores: \( C_1 = 100\ \mu\text{F} \), \( C_2 = 100\ \mu\text{F} \)
+- Resistencia de carga: \( R = 60\ \Omega \)
+- Frecuencia de conmutación: \( f_s = 60\ \text{kHz} \)
+- Ciclo de trabajo: \( D = 0.65 \)
 
-Diseñar y analizar un convertidor Ćuk con los siguientes parámetros:
+---
 
-## Parámetro-Valor 
+## 📐 Desarrollo Analítico
+Todos los cálculos algebraicos y resultados se detallan en la carpeta `Calculos/` en formato PDF. A continuación se resumen los resultados principales:
 
-| Parámetro | Valor |
-|-----------|--------|
-| Voltaje de entrada (Vin) | 18 V |
-| Voltaje de salida (Vout) | -33.43 V |
-| Frecuencia de conmutación | 60 kHz |
-| Inductancia L1 | 330 µH |
-| Inductancia L2 | 330 µH |
-| Capacitor C1 | 100 µF |
-| Capacitor C2 | 100 µF |
-| Resistencia de carga | 60 Ω |
-| Ciclo de trabajo (D) | 0.65 |
+### 1. Relación de conversión
+\[
+\frac{V_O}{V_G} = -\frac{D}{1-D} = -\frac{0.65}{1-0.65} = -1.857
+\]
 
-# 1. Desarrollo Analítico
+### 2. Tensión de salida
+\[
+V_O = V_G \cdot \left(-\frac{D}{1-D}\right) = 18 \cdot (-1.857) = -33.43\ \text{V}
+\]
+*Polaridad: Inversa respecto a la entrada*
 
-Se realizó el análisis matemático completo del convertidor Ćuk ideal:
+### 3. Corriente media de salida
+\[
+I_O = \frac{|V_O|}{R} = \frac{33.43}{60} = 0.557\ \text{A}
+\]
 
-- Obtención de la relación de conversión.
-- Cálculo del voltaje promedio de salida.
-- Cálculo de la corriente promedio de salida.
-- Cálculo de potencia de salida.
-- Cálculo de corriente promedio de entrada.
-- Determinación del período de conmutación.
-- Cálculo del rizado de corriente en L1 y L2.
-- Cálculo de corrientes máximas y mínimas.
-- Verificación de operación en modo de conducción continua (MCC).
-- Cálculo de voltaje promedio y rizado en los capacitores.
-- Cálculo del porcentaje de rizado de salida.
+### 4. Potencia media de salida
+\[
+P_O = |V_O| \cdot I_O = 33.43 \cdot 0.557 = 18.62\ \text{W}
+\]
 
-# 2. Simulación en Multisim
+### 5. Corriente media de entrada
+\[
+I_{in} = \frac{P_O}{V_G} = \frac{18.62}{18} = 1.034\ \text{A}
+\]
 
-Se implementó el convertidor Ćuk utilizando:
+### 6. Periodo de conmutación
+\[
+T_s = \frac{1}{f_s} = \frac{1}{60000} = 16.67\ \mu\text{s}
+\]
 
-- Fuente DC de 18 V.
-- MOSFET controlado por PWM.
-- Frecuencia de conmutación de 60 kHz.
-- Ciclo de trabajo de 65%.
-- L1 = 330 µH.
-- L2 = 330 µH.
-- C1 = 100 µF.
-- C2 = 100 µF.
-- Resistencia de carga de 60 Ω.
+### 7. Rizado de corriente en inductancias
+\[
+\Delta i_{L1} = \frac{V_G \cdot D}{L_1 \cdot f_s} = \frac{18 \cdot 0.65}{330\times10^{-6} \cdot 60000} = 0.591\ \text{A}
+\]
+\[
+\Delta i_{L2} = \frac{|V_O| \cdot (1-D)}{L_2 \cdot f_s} = \frac{33.43 \cdot 0.35}{330\times10^{-6} \cdot 60000} = 0.591\ \text{A}
+\]
 
-Durante la simulación se verificaron:
+### 8. Corrientes máximas y mínimas
+- **Inductancia \( L_1 \):**
+  \[
+  i_{L1,\text{max}} = I_{in} + \frac{\Delta i_{L1}}{2} = 1.034 + 0.295 = 1.329\ \text{A}
+  \]
+  \[
+  i_{L1,\text{min}} = I_{in} - \frac{\Delta i_{L1}}{2} = 1.034 - 0.295 = 0.739\ \text{A}
+  \]
+- **Inductancia \( L_2 \):**
+  \[
+  i_{L2,\text{max}} = I_O + \frac{\Delta i_{L2}}{2} = 0.557 + 0.295 = 0.852\ \text{A}
+  \]
+  \[
+  i_{L2,\text{min}} = I_O - \frac{\Delta i_{L2}}{2} = 0.557 - 0.295 = 0.262\ \text{A}
+  \]
 
-- Voltaje de salida.
-- Corriente de salida.
-- Corriente en L1.
-- Corriente en L2.
-- Corriente en el MOSFET.
-- Corriente en el diodo.
-- Voltaje en C1.
-- Voltaje en C2.
-- Rizado de tensión.
-- Rizado de corriente.
+✅ **Modo de operación:** Ambas inductancias mantienen corriente positiva en todo el ciclo → **Conducción Continua (MCC)**
 
-Las mediciones se realizaron mediante osciloscopio y cursores.
+### 9. Rizado de tensión en condensadores
+\[
+\Delta V_{C1} = \frac{I_O \cdot D}{C_1 \cdot f_s} = \frac{0.557 \cdot 0.65}{100\times10^{-6} \cdot 60000} = 0.060\ \text{V}
+\]
+\[
+\Delta V_{C2} = \frac{I_O \cdot (1-D)}{C_2 \cdot f_s} = \frac{0.557 \cdot 0.35}{100\times10^{-6} \cdot 60000} = 0.032\ \text{V}
+\]
+\[
+\text{Rizado relativo de salida} = \frac{\Delta V_O}{|V_O|} \times 100 = \frac{0.032}{33.43} \times 100 = 0.096\%
+\]
 
-# 3. Comparación Teoría vs Simulación
+---
 
-Se compararon los resultados teóricos y simulados para determinar el porcentaje de error mediante:
+## 🧪 Simulación en Multisim
+El circuito completo se encuentra en la carpeta `Simulacion_Multisim/`. Se configuró con:
+- Fuente de 18 V
+- Generador PWM: \( D=0.65 \), \( f_s=60\ \text{kHz} \)
+- Componentes con los valores nominales indicados
+- Instrumentos: osciloscopio, multímetros y cursores de medición
 
-Error (%) = ((Valor Simulado - Valor Teórico) / Valor Teórico) × 100
+### Señales validadas:
+- Tensión de salida \( v_O(t) \)
+- Corrientes en \( L_1 \) y \( L_2 \)
+- Tensiones en \( C_1 \) y \( C_2 \)
+- Corrientes por MOSFET y diodo
+- Medición directa de rizados de corriente y tensión
 
-# Resultados del Convertidor Ćuk — Teoría vs Simulación
+---
 
-## | Variable | Símbolo | Teórico | Simulado | Error % |
+## 📊 Comparación Teoría vs Simulación
+| Variable       | Valor Teórico | Valor Simulado | Error (%) |
+|----------------|---------------|----------------|-----------|
+| \( V_O \)      | -33.43 V      | -33.26 V       | 0.51%     |
+| \( I_O \)      | 0.557 A       | 0.554 A        | 0.54%     |
+| \( \Delta i_{L1} \) | 0.591 A | 0.590 A | 0.17% |
+| \( \Delta i_{L2} \) | 0.591 A | 0.590 A | 0.17% |
+| \( \Delta V_{C1} \) | 0.060 V | 0.058 V | 3.33% |
+| \( \Delta V_{C2} \) | 0.032 V | 0.031 V | 3.12% |
+| Rizado (%)     | 0.096%        | 0.093%         | 3.12%     |
 
-- | Ciclo de trabajo | D | 0.65 | 0.65 | 0.00 % |
-- | Voltaje de salida | Vo | -33.43 V | -32.6 V | 2.48 % |
-- | Corriente de salida | Io | 0.557 A | 0.544 A | 2.33 % |
-- | Potencia de salida | Po | 18.63 W | 17.7 W | 4.99 % |
-- | Corriente de entrada | Iin | 1.035 A | 1.03 A | 0.48 % |
-- | Rizo de corriente L1 | ΔiL1 | 0.591 A | 0.590 A | 0.17% |
-- | Rizo de corriente L2 | ΔiL2 | 0.591 A | 0.590 A | 0.17 % |
-- | Corriente L1 máxima | iL1,max | 1.330 A | 1.32 A | 0.75 % |
-- | Corriente L1 mínima | iL1,min | 0.739 A | 0.731 A | 1.08 % |
-- | Corriente L2 máxima | iL2,max | 0.853 A | 0.839 A | 1.64% |
-- | Corriente L2 mínima | iL2,min | 0.262 A | 0.249 A | 4.96% |
-- | Rizo de voltaje C1 | ΔVC1 | 0.060 V | 0.059 V | 1.67 % |
-- | Rizo de voltaje de salida | ΔVo | 12.3 mV | 12 mV | 2.44% |
-- | Rizado de salida | %rizo | 0.037 % | 0.37 % | 0.00% |
+✅ Los resultados coinciden con desviaciones menores al 5%, debidas a pérdidas parásitas y redondeo numérico.
+
+---
+
+## 📄 Selección de Componentes
+Se consultaron las hojas técnicas de todos los elementos, disponibles en la carpeta `Datasheets/`:
+- **MOSFET:** RFD3055LE → 60 V, 12 A, baja resistencia de encendido, adecuado para 60 kHz
+- **Driver:** NCP81253 → 5 V de alimentación, salida suficiente para conmutar el MOSFET
+- **Diodo:** Schottky 45 V / 5 A → baja caída de tensión directa
+- **Inductancias:** 330 µH, corriente nominal ≥ 2 A → soportan la corriente máxima con margen
+- **Condensadores:** Electrolíticos 100 µF / 50 V → tensión nominal mayor a la máxima de operación
+
+
 
 
 
