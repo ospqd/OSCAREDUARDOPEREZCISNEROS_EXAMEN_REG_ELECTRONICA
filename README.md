@@ -52,43 +52,45 @@ El convertidor funciona bajo las siguientes condiciones:
 5. Se midieron y registraron todos los valores: tensión de salida, corrientes en inductancias, tensiones en condensadores, corrientes por el MOSFET y el diodo, así como los valores de rizado.
 6. Se capturaron todas las pantallas: esquema del circuito, señales de control, formas de onda de tensión y corriente, y mediciones realizadas con los instrumentos.
    
-**Esquemático completo**
+## Esquemático completo
 
-![Esquemático](https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/380bcfa67700527391faaa13f370f75852fe0e5b/Evidencias/Esquematico%20completo%20con%20parametros%20de%20simulacion.png?raw=true)
+![Esquemático](https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/fc7384822a5790bc9f3560de023b446067b52dec/Evidencias/Esquematico%20completo%20con%20parametros%20de%20simulacion.png?raw=true) <img src="                                                                                                                                                                                                                         https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/fc7384822a5790bc9f3560de023b446067b52dec/Evidencias/Esquematico%20completo%20con%20parametros%20de%20simulacion.png)" alt="Imagen" width="600">
 
-**Señal PWM**
+## Señal PWM
 ![Señal](https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/9d0223fc54baa5a7250ba1fceb2747e4f9994e38/Evidencias/Se%C3%B1al%20PWM%20aplicada%20al%20MOSFET.png?raw=true)
 
-**Tension de Salida**
+## Tension de Salida
 ![Vo](https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/9d0223fc54baa5a7250ba1fceb2747e4f9994e38/Evidencias/Tension%20de%20Salida.png?raw=true)
 
-**Corriente en L1**
+## Corriente en L1
 ![L1](https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/e1ecf87ae49707e5969dcb5bf94db16f37607d36/Evidencias/Corriente%20en%20L1.png?raw=true)
 ![L1](https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/e1ecf87ae49707e5969dcb5bf94db16f37607d36/Evidencias/Corriente%20en%20L1%20Amperimetro.png?raw=true)
 
-**Corriente en L2**
+## Corriente en L2
 ![L2](https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/e1ecf87ae49707e5969dcb5bf94db16f37607d36/Evidencias/Corriente%20en%20L2.png?raw=true)
 ![L2](https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/e1ecf87ae49707e5969dcb5bf94db16f37607d36/Evidencias/Corriente%20en%20L2%20Amperimetro.png?raw=true)
 
-**Tension en C1**
+## Tension en C1
 ![C1](https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/e1ecf87ae49707e5969dcb5bf94db16f37607d36/Evidencias/Tension%20delC1%20tecktronix.png?raw=true)
 
-**Tension en C2**
+## Tension en C2
 ![C2](https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/3b221d198d34fc881750cf68795c8d894a830c1b/Evidencias/Tension%20del%20C2%20Tectronix.png?raw=true)
 ![C2](https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/3b221d198d34fc881750cf68795c8d894a830c1b/Evidencias/Tension%20del%20C2%20multimetro.png?raw=true)
 
-**Corriente en el Mosfet**
+## Corriente en el Mosfet
 ![M1](https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/3b221d198d34fc881750cf68795c8d894a830c1b/Evidencias/Corriente%20en%20el%20MOSFET.png?raw=true)
 ![M1](https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/3b221d198d34fc881750cf68795c8d894a830c1b/Evidencias/Corriente%20del%20MOSFET%20Amperimetro.png?raw=true)
 
-**Corriente en el diodo**
+## Corriente en el diodo
 ![D1](https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/3b221d198d34fc881750cf68795c8d894a830c1b/Evidencias/Corriente%20del%20diodo.png?raw=true)
 ![D1](https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/3b221d198d34fc881750cf68795c8d894a830c1b/Evidencias/Corriente%20del%20diodo%20Amperimetro.png?raw=true)
 
-**Rizado de tension usando cursores**
+## Rizado de tension usando cursores
 ![T1](https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/3b221d198d34fc881750cf68795c8d894a830c1b/Evidencias/Rizado%20de%20tension%20usando%20cursores.png?raw=true)
 
-**Rizado de corriente usando cursores**
+
+
+## Rizado de corriente usando cursores
 ![C1](https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/3b221d198d34fc881750cf68795c8d894a830c1b/Evidencias/Rizado%20de%20corriente%20usando%20cursores.png?raw=true)
 
 
