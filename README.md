@@ -140,7 +140,7 @@ El convertidor funciona bajo las siguientes condiciones:
 ---
 
 ## Corriente en el diodo
-<img src="https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/main/Evidencias/Corriente%20del%20diodo.png?raw=true" alt="Forma de onda corriente diodo" width="520">
+<img src="https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/644a600f00da794981e332adac32d44ac447e792/Evidencias/Corrriente%20del%20diodo.png?raw=true" alt="Forma de onda corriente diodo" width="520">
 <img src="https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/main/Evidencias/Corriente%20del%20diodo%20Amperimetro.png?raw=true" alt="Medición amperímetro diodo" width="520">
 
 ✅ **Explicación:** Conduce cuando el MOSFET está apagado, completando el ciclo de transferencia de energía.
