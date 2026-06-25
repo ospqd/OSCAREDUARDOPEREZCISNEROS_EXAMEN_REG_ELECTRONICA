@@ -41,11 +41,11 @@ El convertidor funciona bajo las siguientes condiciones:
 8. Se verificó que en todo momento la corriente se mantiene positiva → funcionamiento en Modo de Conducción Continua (MCC).
 9. Se calculó la variación de tensión (rizado) en el condensador de transferencia y en el condensador de salida.
 10. Se determinó el porcentaje de rizado total en la tensión de salida.
-# Convertidor Cúk
 
-## Desarrollo Analítico
+#Calculos
+-[PDF](https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/c5e9364d775b1ad501865425b37fe17e9e66a2be/Calculos.pdf)
 
-📄 [Ver documento completo](./https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/c5e9364d775b1ad501865425b37fe17e9e66a2be/Calculos.pdf)
+
 
 ---
 ## 2. Simulación en Multisim
