@@ -187,6 +187,9 @@ Como el modelo **RFD3055LE** no viene incluido de forma nativa en Multisim, yo r
 3. Ajusté todos estos parámetros para que coincidieran exactamente con lo que indica la hoja de datos del RFD3055LE.
 4. Verifiqué que con estos cambios el circuito funcionara igual que si usara el modelo solicitado.
 
+## Cambio de parametros del Mosfet IRF540
+<img src="https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/5ad3a76de48f763c8e1c234c7f189130c5392e57/Evidencias/Cambio%20de%20Parametros%20en%20el%20Mosfet.png" alt="Tensión de salida Vo" width="550">
+
 #### ⚙️ Ajustes en el resto de componentes
 - **Diodo:** El modelo **MUR460G** que usé en la simulación es idéntico al **MUR460** elegido para la placa; solo cambia la terminación de la referencia, pero sus especificaciones son exactamente las mismas.
 - **Driver:** En la simulación solo necesité generar la señal de control, pero para el diseño físico incluí el NCP81253 para garantizar que la señal de 5 V tenga la potencia suficiente para mover la compuerta del MOSFET.
