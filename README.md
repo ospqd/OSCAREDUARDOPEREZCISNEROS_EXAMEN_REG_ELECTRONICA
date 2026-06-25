@@ -14,8 +14,10 @@
 Realizar el análisis teórico, simulación, validación de resultados, selección de componentes y documentación completa de un convertidor CC-CC tipo Cúk,
 
 ---
+## Problema asignado
 
-## ⚙️ Parámetros Asignados
+**Diseñar y analizar un convertidor Ćuk con los siguientes parámetros:**
+
 El convertidor funciona bajo las siguientes condiciones:
 - Tensión de entrada: 18 V
 - Inductancias: 330 µH
@@ -25,7 +27,7 @@ El convertidor funciona bajo las siguientes condiciones:
 - Ciclo de trabajo: 0.65
 
 ---
-
+## Metodología utilizada
 
 ## 1. Desarrollo Analítico
 ✅ Obtener la relación de conversión, calcular tensiones, corrientes, rizados, valores máximos y mínimos, y determinar el modo de operación.
@@ -242,16 +244,35 @@ Como el modelo **RFD3055LE** no viene incluido de forma nativa en Multisim, yo r
 
 ---
 
-## ✅ Conclusión final
-- Se diseñó y simuló correctamente un convertidor Cúk que invierte la polaridad de la tensión de entrada y entrega un valor de salida estable.
-- El uso del MOSFET IRF540 fue adecuado para la simulación, ya que soporta con holgura todas las condiciones de operación.
-- El circuito funciona en **Modo de Conducción Continua** en todo momento.
-- Las diferencias entre cálculos teóricos y resultados de simulación son menores al 5 %, lo que valida el diseño.
-- Todos los componentes seleccionados tienen márgenes de seguridad suficientes para una posible construcción física.
+### Descripción de carpetas
 
-
+- **Calculos:** Desarrollo analítico y procedimientos matemáticos.
+- **Simulacion_Multisim:** Archivos de simulación y capturas de resultados.
+- **Datasheets:** Hojas de datos de los componentes principales.
+- **Evidencias:** Capturas de pantalla y documentación del proyecto.
 
 ---
+
+## Conclusiones
+
+- Se diseñó y analizó correctamente un convertidor Ćuk capaz de convertir 18 V en aproximadamente -33.43 V.
+- El análisis matemático permitió determinar un ciclo de trabajo de 65 %.
+- La simulación en Multisim confirmó el comportamiento esperado del convertidor.
+- El rizado de salida obtenido fue muy bajo, aproximadamente 12 mV (0.036 %).
+- Los resultados teóricos y simulados presentan una alta concordancia, validando el diseño realizado.
+- El diseño PCB desarrollado en KiCad permite la futura implementación física del convertidor.
+
+---
+
+## 📁 Estructura del repositorio
+
+
+/
+README.md
+Calculos/
+Simulacion_Multisim/
+Datasheets/
+Evidencias/
 
 **Repositorio compartido con:** @erickmone
 **Fecha de entrega:** 26 de junio de 2026
