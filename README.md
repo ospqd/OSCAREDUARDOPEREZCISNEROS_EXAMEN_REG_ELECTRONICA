@@ -1,12 +1,12 @@
 # 📚 Examen de Regularización - Simulación Electrónica
 # 📁 OSCAR_PEREZ_EXAMEN_REG_ELECTRONICA
-**Examen de Regularización**
-**Materia:** Simulación Electrónica 
-**Institución:** Bachillerato Tecnológico Salesiano Carlos Gómez
-**Alumno:** Oscar Eduardo Pérez Cisneros
-**Fecha de elaboración:** 24 de junio de 2026
-**Fecha de entrega:** Viernes 26 de junio de 2026
-**Repositorio compartido con:** @erickmone
+-**Examen de Regularización**
+-**Materia:** Simulación Electrónica 
+-**Institución:** Bachillerato Tecnológico Salesiano Carlos Gómez
+-**Alumno:** Oscar Eduardo Pérez Cisneros
+-**Fecha de elaboración:** 24 de junio de 2026
+-**Fecha de entrega:** Viernes 26 de junio de 2026
+-**Repositorio compartido con:** @erickmone
 
 ---
 
