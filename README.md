@@ -25,6 +25,9 @@ El convertidor funciona bajo las siguientes condiciones:
 - Ciclo de trabajo: 0.65
 
 ---
+$$
+V_{out} = -33.43\ \text{V}
+$$
 
 ## 1. Desarrollo Analítico
 ✅ Obtener la relación de conversión, calcular tensiones, corrientes, rizados, valores máximos y mínimos, y determinar el modo de operación.
