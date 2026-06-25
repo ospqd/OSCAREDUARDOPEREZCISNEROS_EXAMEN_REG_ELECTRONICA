@@ -253,4 +253,5 @@ Como el modelo **RFD3055LE** no viene incluido de forma nativa en Multisim, yo r
 
 ---
 
-## 📂 Estructura Completa del Repositorio
+**Repositorio compartido con:** @erickmone
+**Fecha de entrega:** 26 de junio de 2026
