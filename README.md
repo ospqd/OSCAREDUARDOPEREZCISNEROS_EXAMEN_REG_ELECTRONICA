@@ -53,8 +53,7 @@ El convertidor funciona bajo las siguientes condiciones:
 6. Se capturaron todas las pantallas: esquema del circuito, señales de control, formas de onda de tensión y corriente, y mediciones realizadas con los instrumentos.
    
 ## Esquemático completo
-
-![Esquemático](https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/fc7384822a5790bc9f3560de023b446067b52dec/Evidencias/Esquematico%20completo%20con%20parametros%20de%20simulacion.png?raw=true) <img src="                                                                                                                                                                                                                         https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/fc7384822a5790bc9f3560de023b446067b52dec/Evidencias/Esquematico%20completo%20con%20parametros%20de%20simulacion.png)" alt="Imagen" width="600">
+<img src="https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/fc7384822a5790bc9f3560de023b446067b52dec/Evidencias/Esquematico%20completo%20con%20parametros%20de%20simulacion.png?raw=true" alt="Esquemático completo" width="600">
 
 ## Señal PWM
 ![Señal](https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/9d0223fc54baa5a7250ba1fceb2747e4f9994e38/Evidencias/Se%C3%B1al%20PWM%20aplicada%20al%20MOSFET.png?raw=true)
