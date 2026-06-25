@@ -74,7 +74,23 @@ El convertidor funciona bajo las siguientes condiciones:
 ![C1](https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/e1ecf87ae49707e5969dcb5bf94db16f37607d36/Evidencias/Tension%20delC1%20tecktronix.png?raw=true)
 
 **Tension en C2**
-![C2
+![C2](https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/3b221d198d34fc881750cf68795c8d894a830c1b/Evidencias/Tension%20del%20C2%20Tectronix.png?raw=true)
+![C2](https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/3b221d198d34fc881750cf68795c8d894a830c1b/Evidencias/Tension%20del%20C2%20multimetro.png?raw=true)
+
+**Corriente en el Mosfet**
+![M1](https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/3b221d198d34fc881750cf68795c8d894a830c1b/Evidencias/Corriente%20en%20el%20MOSFET.png?raw=true)
+![M1](https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/3b221d198d34fc881750cf68795c8d894a830c1b/Evidencias/Corriente%20del%20MOSFET%20Amperimetro.png?raw=true)
+
+**Corriente en el diodo**
+![D1](https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/3b221d198d34fc881750cf68795c8d894a830c1b/Evidencias/Corriente%20del%20diodo.png?raw=true)
+![D1](https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/3b221d198d34fc881750cf68795c8d894a830c1b/Evidencias/Corriente%20del%20diodo%20Amperimetro.png?raw=true)
+
+**Rizado de tension usando cursores**
+![T1](https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/3b221d198d34fc881750cf68795c8d894a830c1b/Evidencias/Rizado%20de%20tension%20usando%20cursores.png?raw=true)
+
+**Rizado de corriente usando cursores**
+![C1](https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/3b221d198d34fc881750cf68795c8d894a830c1b/Evidencias/Rizado%20de%20corriente%20usando%20cursores.png?raw=true)
+
 
 
 
