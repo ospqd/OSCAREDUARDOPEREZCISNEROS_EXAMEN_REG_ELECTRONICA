@@ -25,9 +25,7 @@ El convertidor funciona bajo las siguientes condiciones:
 - Ciclo de trabajo: 0.65
 
 ---
-$$
-V_{out} = -33.43\ \text{V}
-$$
+
 
 ## 1. Desarrollo Analítico
 ✅ Obtener la relación de conversión, calcular tensiones, corrientes, rizados, valores máximos y mínimos, y determinar el modo de operación.
@@ -43,6 +41,192 @@ $$
 8. Se verificó que en todo momento la corriente se mantiene positiva → funcionamiento en Modo de Conducción Continua (MCC).
 9. Se calculó la variación de tensión (rizado) en el condensador de transferencia y en el condensador de salida.
 10. Se determinó el porcentaje de rizado total en la tensión de salida.
+## 1. Relación de conversión de tensión
+Indica la relación entre la tensión de entrada y salida; invierte la polaridad.
+
+**Fórmula:**
+$$
+\frac{V_{out}}{V_{in}} = -\frac{D}{1-D}
+$$
+
+**Sustitución:**
+$$
+\frac{V_{out}}{V_{in}} = -\frac{0.65}{1-0.65} = -1.857
+$$
+$$
+V_{out} = -1.857 \times 18 = -33.43\ \text{V}
+$$
+
+**Resultado:**
+$$
+V_{out} = -33.43\ \text{V}
+$$
+
+---
+
+## 2. Ciclo de trabajo (D)
+Fracción de tiempo que el interruptor permanece encendido.
+
+**Fórmula:**
+$$
+D = \frac{|V_{out}|}{V_{in} + |V_{out}|}
+$$
+
+**Sustitución:**
+$$
+D = \frac{33.43}{18 + 33.43} = \frac{33.43}{51.43} = 0.65
+$$
+
+**Resultado:**
+$D = 0.65$ (65% del tiempo encendido, 35% apagado)
+
+---
+
+## 3. Corriente media de salida
+Se calcula mediante Ley de Ohm, usando valor absoluto por polaridad negativa.
+
+**Fórmula:**
+$$
+I_{out} = \frac{|V_{out}|}{R}
+$$
+
+**Sustitución:**
+$$
+I_{out} = \frac{33.43}{60} = 0.557\ \text{A}
+$$
+
+**Resultado:**
+$I_{out} = 0.557\ \text{A}$
+
+---
+
+## 4. Rizado de corriente en las inductancias
+Variación de corriente alrededor del valor medio.
+
+**Fórmula general:**
+$$
+\Delta i_L = \frac{V \cdot D}{L \cdot f_s}
+$$
+
+**Para $L_1$:**
+$$
+\Delta i_{L1} = \frac{V_{in} \cdot D}{L_1 \cdot f_s} = \frac{18 \times 0.65}{330 \times 10^{-6} \times 60000} = \frac{11.7}{19.8} = 0.591\ \text{A}
+$$
+
+**Para $L_2$:**
+$$
+\Delta i_{L2} = \frac{|V_{out}| \cdot (1-D)}{L_2 \cdot f_s} = \frac{33.43 \times 0.35}{330 \times 10^{-6} \times 60000} = 0.591\ \text{A}
+$$
+
+---
+
+## 5. Rizado de tensión en los capacitores
+Variación de tensión durante la carga y descarga.
+
+**En $C_1$:**
+$$
+\Delta V_{C1} = \frac{I_{out} \cdot D}{C_1 \cdot f_s} = \frac{0.557 \times 0.65}{100 \times 10^{-6} \times 60000} = 0.0603\ \text{V} = 60.3\ \text{mV}
+$$
+$$
+\% \text{Rizado } C_1 = \frac{60.3 \times 10^{-3}}{51.43} \times 100 = 0.12\%
+$$
+
+**En $C_2$:**
+$$
+\Delta V_{C2} = \frac{\Delta i_{L2}}{8 \cdot C_2 \cdot f_s} = \frac{0.591}{8 \times 100 \times 10^{-6} \times 60000} = 0.0123\ \text{V} = 12.3\ \text{mV}
+$$
+$$
+\% \text{Rizado } C_2 = \frac{12.3 \times 10^{-3}}{33.43} \times 100 = 0.037\%
+$$
+
+---
+
+## 6. Determinación del modo de operación (MCC / MCD)
+- **MCC:** La corriente en la bobina nunca llega a cero → comportamiento estable.
+- **MCD:** La corriente llega a cero y se detiene → cambian las fórmulas y el control es más complejo.
+
+**Cálculo:**
+$$
+I_{L1(\text{mín})} = I_{L1} - \frac{\Delta i_{L1}}{2} = 1.035 - \frac{0.591}{2} = 0.730\ \text{A} > 0
+$$
+$$
+I_{L2(\text{mín})} = I_{L2} - \frac{\Delta i_{L2}}{2} = 0.557 - \frac{0.591}{2} = 0.261\ \text{A} > 0
+$$
+
+✅ **Conclusión:** Opera en **Modo de Conducción Continuo (MCC)**.
+
+---
+
+## 7. Valores máximos y mínimos de corriente
+$$
+I_{L1(\text{máx})} = I_{L1} + \frac{\Delta i_{L1}}{2} = 1.035 + \frac{0.591}{2} = 1.33\ \text{A}
+$$
+$$
+I_{L1(\text{mín})} = I_{L1} - \frac{\Delta i_{L1}}{2} = 1.035 - \frac{0.591}{2} = 0.74\ \text{A}
+$$
+$$
+I_{L2(\text{máx})} = I_{L2} + \frac{\Delta i_{L2}}{2} = 0.557 + \frac{0.591}{2} = 0.85\ \text{A}
+$$
+$$
+I_{L2(\text{mín})} = I_{L2} - \frac{\Delta i_{L2}}{2} = 0.557 - \frac{0.591}{2} = 0.26\ \text{A}
+$$
+
+---
+
+## 8. Corriente media en $L_1$ (Corriente de entrada)
+$$
+I_{L1} = I_{in} = \frac{|V_{out}| \cdot I_{out}}{V_{in}} = \frac{33.43 \times 0.557}{18} = 1.035\ \text{A}
+$$
+
+---
+
+## 9. Tensión media en $C_1$
+$$
+V_{C1} = V_{in} + |V_{out}| = 18 + 33.43 = 51.43\ \text{V}
+$$
+
+---
+
+## 10. Periodo de Conmutación
+$$
+T = \frac{1}{f_s} = \frac{1}{60000} = 16.67\ \mu\text{s}
+$$
+
+---
+
+## 11. Potencia de salida
+$$
+P_{out} = |V_{out}| \cdot I_{out} = 33.43 \times 0.557 = 18.62\ \text{W}
+$$
+
+---
+
+## 12. Potencia de Entrada
+$$
+P_{in} = V_{in} \cdot I_{in} = 18 \times 1.035 = 18.63\ \text{W}
+$$
+
+---
+
+## 13. Corriente media en $L_2$
+$$
+I_{L2} = I_{out} = 0.557\ \text{A}
+$$
+
+---
+
+## 14. Tensión máxima en el MOSFET
+$$
+V_{SW(\text{máx})} = V_{in} + |V_{out}| = 51.43\ \text{V}
+$$
+
+---
+
+## 15. Eficiencia del convertidor
+$$
+\eta = \frac{P_{out}}{P_{in}} \times 100 = \frac{18.62}{18.63} \times 100 = 99.95\% \approx 100\%
+$$
+*(Valor ideal, sin considerar pérdidas reales)*
 
 ---
 ## 2. Simulación en Multisim
