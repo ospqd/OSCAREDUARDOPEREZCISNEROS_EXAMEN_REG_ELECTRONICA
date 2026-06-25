@@ -41,6 +41,7 @@ El convertidor funciona bajo las siguientes condiciones:
 9. Se calculó la variación de tensión (rizado) en el condensador de transferencia y en el condensador de salida.
 10. Se determinó el porcentaje de rizado total en la tensión de salida.
 
+---
 ## 2. Simulación en Multisim
 ✅ Construir el circuito, configurar parámetros, medir todas las magnitudes y guardar capturas de señales e instrumentos.
 
@@ -52,68 +53,105 @@ El convertidor funciona bajo las siguientes condiciones:
 5. Se midieron y registraron todos los valores: tensión de salida, corrientes en inductancias, tensiones en condensadores, corrientes por el MOSFET y el diodo, así como los valores de rizado.
 6. Se capturaron todas las pantallas: esquema del circuito, señales de control, formas de onda de tensión y corriente, y mediciones realizadas con los instrumentos.
    
-## Esquemático completo
-<img src="https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/fc7384822a5790bc9f3560de023b446067b52dec/Evidencias/Esquematico%20completo%20con%20parametros%20de%20simulacion.png?raw=true" alt="Esquemático completo" width="600">
+📋 **Descripción de Componentes Usados**
+### MOSFET de potencia
+- **Modelo utilizado en simulación:** IRF540
+
+### Diodo de conmutación
+- **Modelo:** MUR460G
+- **Características:** Diodo de recuperación rápida, soporta 600 V de tensión inversa y 4 A de corriente máxima.
+
+### Inductancias
+- **Valor:** 330 µH
+- **Justificación:** Es el valor asignado, suficiente para mantener el modo de conducción continua y limitar el rizado de corriente.
+
+### Condensadores
+- **Valor:** 100 µF
+- **Justificación:** Permiten transferir energía entre entrada y salida, además de filtrar la tensión final para obtener un rizado muy bajo.
 
 ---
 
-## Señal PWM
-<img src="https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/9d0223fc54baa5a7250ba1fceb2747e4f9994e38/Evidencias/Se%C3%B1al%20PWM%20aplicada%20al%20MOSFET.png?raw=true" alt="Señal PWM aplicada al MOSFET" width="550">
+## Esquemático completo
+<img src="https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/main/Evidencias/Esquematico%20completo%20con%20parametros%20de%20simulacion.png?raw=true" alt="Esquemático completo" width="600">
+
+✅ **Explicación:** Se observa la configuración típica del convertidor Cúk, con el MOSFET IRF540 como elemento de conmutación, el diodo MUR460G, las dos inductancias de 330 µH, los condensadores de 100 µF y la resistencia de carga de 60 Ω.
+
+---
+
+## Señal PWM aplicada al MOSFET
+<img src="https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/main/Evidencias/Se%C3%B1al%20PWM%20aplicada%20al%20MOSFET.png?raw=true" alt="Señal PWM" width="550">
+
+✅ **Explicación:** Onda cuadrada de 60 kHz y ciclo de trabajo del 65 %, encargada de activar y desactivar el IRF540 para regular la tensión de salida.
 
 ---
 
 ## Tensión de Salida
-<img src="https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/9d0223fc54baa5a7250ba1fceb2747e4f9994e38/Evidencias/Tension%20de%20Salida.png?raw=true" alt="Tensión de salida Vo" width="550">
+<img src="https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/main/Evidencias/Tension%20de%20Salida.png?raw=true" alt="Tensión de salida Vo" width="550">
+
+✅ **Explicación:** Valor medio estable de aproximadamente -32.6 V, con polaridad inversa respecto a la entrada, tal como se espera en este tipo de convertidor.
 
 ---
 
 ## Corriente en L1
-<img src="https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/e1ecf87ae49707e5969dcb5bf94db16f37607d36/Evidencias/Corriente%20en%20L1.png?raw=true" alt="Forma de onda corriente L1" width="520">
+<img src="https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/main/Evidencias/Corriente%20en%20L1.png?raw=true" alt="Forma de onda corriente L1" width="520">
+<img src="https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/main/Evidencias/Corriente%20en%20L1%20Amperimetro.png?raw=true" alt="Medición amperímetro L1" width="520">
 
-<img src="https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/e1ecf87ae49707e5969dcb5bf94db16f37607d36/Evidencias/Corriente%20en%20L1%20Amperimetro.png?raw=true" alt="Medición amperímetro L1" width="520">
+✅ **Explicación:** Corriente continua con pequeña variación, siempre positiva → confirma operación en modo continuo.
 
 ---
 
 ## Corriente en L2
-<img src="https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/e1ecf87ae49707e5969dcb5bf94db16f37607d36/Evidencias/Corriente%20en%20L2.png?raw=true" alt="Forma de onda corriente L2" width="520">
+<img src="https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/main/Evidencias/Corriente%20en%20L2.png?raw=true" alt="Forma de onda corriente L2" width="520">
+<img src="https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/main/Evidencias/Corriente%20en%20L2%20Amperimetro.png?raw=true" alt="Medición amperímetro L2" width="520">
 
-<img src="https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/e1ecf87ae49707e5969dcb5bf94db16f37607d36/Evidencias/Corriente%20en%20L2%20Amperimetro.png?raw=true" alt="Medición amperímetro L2" width="520">
+✅ **Explicación:** Comportamiento similar a L1, manteniéndose siempre por encima de cero.
 
 ---
 
 ## Tensión en C1
-<img src="https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/e1ecf87ae49707e5969dcb5bf94db16f37607d36/Evidencias/Tension%20delC1%20tecktronix.png?raw=true" alt="Tensión en capacitor C1" width="520">
+<img src="https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/main/Evidencias/Tension%20delC1%20tecktronix.png?raw=true" alt="Tensión en capacitor C1" width="520">
+
+✅ **Explicación:** Capacitor encargado de transferir la energía entre la entrada y la salida del circuito.
 
 ---
 
 ## Tensión en C2
-<img src="https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/3b221d198d34fc881750cf68795c8d894a830c1b/Evidencias/Tension%20del%20C2%20Tectronix.png?raw=true" alt="Forma de onda tensión C2" width="520">
+<img src="https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/main/Evidencias/Tension%20del%20C2%20Tectronix.png?raw=true" alt="Forma de onda tensión C2" width="520">
+<img src="https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/main/Evidencias/Tension%20del%20C2%20multimetro.png?raw=true" alt="Medición multímetro C2" width="520">
 
-<img src="https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/3b221d198d34fc881750cf68795c8d894a830c1b/Evidencias/Tension%20del%20C2%20multimetro.png?raw=true" alt="Medición multímetro C2" width="520">
+✅ **Explicación:** Filtra la tensión final, reduciendo su variación a valores muy bajos.
 
 ---
 
-## Corriente en el MOSFET
-<img src="https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/3b221d198d34fc881750cf68795c8d894a830c1b/Evidencias/Corriente%20en%20el%20MOSFET.png?raw=true" alt="Forma de onda corriente MOSFET" width="520">
+## Corriente en el MOSFET IRF540
+<img src="https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/main/Evidencias/Corriente%20en%20el%20MOSFET.png?raw=true" alt="Forma de onda corriente MOSFET" width="520">
+<img src="https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/main/Evidencias/Corriente%20del%20MOSFET%20Amperimetro.png?raw=true" alt="Medición amperímetro MOSFET" width="520">
 
-<img src="https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/3b221d198d34fc881750cf68795c8d894a830c1b/Evidencias/Corriente%20del%20MOSFET%20Amperimetro.png?raw=true" alt="Medición amperímetro MOSFET" width="520">
+✅ **Explicación:** Circula únicamente durante el tiempo en que el transistor está activado, con valores muy por debajo de su límite máximo.
 
 ---
 
 ## Corriente en el diodo
-<img src="https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/3b221d198d34fc881750cf68795c8d894a830c1b/Evidencias/Corriente%20del%20diodo.png?raw=true" alt="Forma de onda corriente diodo" width="520">
+<img src="https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/main/Evidencias/Corriente%20del%20diodo.png?raw=true" alt="Forma de onda corriente diodo" width="520">
+<img src="https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/main/Evidencias/Corriente%20del%20diodo%20Amperimetro.png?raw=true" alt="Medición amperímetro diodo" width="520">
 
-<img src="https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/3b221d198d34fc881750cf68795c8d894a830c1b/Evidencias/Corriente%20del%20diodo%20Amperimetro.png?raw=true" alt="Medición amperímetro diodo" width="520">
+✅ **Explicación:** Conduce cuando el MOSFET está apagado, completando el ciclo de transferencia de energía.
 
 ---
 
 ## Rizado de tensión usando cursores
-<img src="https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/3b221d198d34fc881750cf68795c8d894a830c1b/Evidencias/Rizado%20de%20tension%20usando%20cursores.png?raw=true" alt="Medición rizado de tensión" width="520">
+<img src="https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/main/Evidencias/Rizado%20de%20tension%20usando%20cursores.png?raw=true" alt="Medición rizado de tensión" width="520">
+
+✅ **Explicación:** Variación de solo 12 mV, lo que representa menos del 0.04 % respecto al valor medio.
 
 ---
 
 ## Rizado de corriente usando cursores
-<img src="https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/3b221d198d34fc881750cf68795c8d894a830c1b/Evidencias/Rizado%20de%20corriente%20usando%20cursores.png?raw=true" alt="Medición rizado de corriente" width="520">
+<img src="https://github.com/ospqd/OSCAREDUARDOPEREZCISNEROS_EXAMEN_REG_ELECTRONICA/blob/main/Evidencias/Rizado%20de%20corriente%20usando%20cursores.png?raw=true" alt="Medición rizado de corriente" width="520">
+
+✅ **Explicación:** Confirma que la corriente no se anula en ningún momento, manteniendo el modo de conducción continua.
+
+---
 
 
 
@@ -197,6 +235,14 @@ Como el modelo **RFD3055LE** no viene incluido de forma nativa en Multisim, yo r
 - **Condensadores:** Configuré en el programa 100 µF y 50 V de tensión, igual que el componente real ABA0000C1018, que además tiene baja resistencia interna para reducir el rizado.
 
 ---
+
+## ✅ Conclusión final
+- Se diseñó y simuló correctamente un convertidor Cúk que invierte la polaridad de la tensión de entrada y entrega un valor de salida estable.
+- El uso del MOSFET IRF540 fue adecuado para la simulación, ya que soporta con holgura todas las condiciones de operación.
+- El circuito funciona en **Modo de Conducción Continua** en todo momento.
+- Las diferencias entre cálculos teóricos y resultados de simulación son menores al 5 %, lo que valida el diseño.
+- Todos los componentes seleccionados tienen márgenes de seguridad suficientes para una posible construcción física.
+
 
 
 ---
