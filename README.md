@@ -11,7 +11,7 @@
 ---
 
 ## 🎯 Objetivo del Proyecto
-Realizar el análisis teórico, simulación, validación de resultados, selección de componentes y documentación completa de un convertidor CC-CC tipo Cúk,
+Realizar el análisis teórico, simulación, validación de resultados, selección de componentes y documentación completa de un convertidor CC-CC tipo Ćuk,
 
 ---
 ## Problema asignado
@@ -260,7 +260,6 @@ Como el modelo **RFD3055LE** no viene incluido de forma nativa en Multisim, yo r
 - La simulación en Multisim confirmó el comportamiento esperado del convertidor.
 - El rizado de salida obtenido fue muy bajo, aproximadamente 12 mV (0.036 %).
 - Los resultados teóricos y simulados presentan una alta concordancia, validando el diseño realizado.
-- El diseño PCB desarrollado en KiCad permite la futura implementación física del convertidor.
 
 ---
 
@@ -268,11 +267,11 @@ Como el modelo **RFD3055LE** no viene incluido de forma nativa en Multisim, yo r
 
 
 /
-README.md
-Calculos/
-Simulacion_Multisim/
-Datasheets/
-Evidencias/
+├── README.md
+├── Calculos
+├── Simulacion_Multisim
+├── Datasheets
+└── Evidencias
 
 **Repositorio compartido con:** @erickmone
 **Fecha de entrega:** 26 de junio de 2026
